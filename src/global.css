@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.title{
+    font-family: 'Odibee Sans', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Righteous', cursive;
+font-family: 'Roboto Mono', monospace;
+}
+
+body{
+    @apply bg-[#09090A] text-zinc-100
+}
+.headerx{
+    padding-top: 20px;
+    margin-right: 15px;
+    font-size: 20px;
+}
+.logo{
+    margin-right: 70px;
+    padding: 0;
+    margin: 0;
+    padding-left: 55px;
+    padding-top: 20px;
+}
+.home{
+    margin-left:100px;
+}
+.title{
+    padding-left: 15px;
+    font-size: 30px;
+}
+.languages{
+    width: 100%;
+    height: 400px;
+    background-image: url();
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-size: 100%; 
+    background-position: center;
+}
+body{
+    color: #996DDF ;
+}
