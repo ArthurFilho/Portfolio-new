@@ -15,7 +15,7 @@ import "../global.css"
                 <a href="#"> Home </a>
                 </div>
                 <div className="headerx">
-                Projects
+                <a href="#"> Projects </a>
                 </div>
                 <div className="headerx">
                 <a href="mailto:peraarthur2018@hotmail.com"> Contact</a>   

@@ -1,7 +1,7 @@
 import { Widget } from "./components/Widget";
-import Header from "./components/Header"
-import Body from "./Body";
-import EndingPage from "./components/endingPage";
+import Header from "./body-of-front/Header"
+import Body from "./body-of-front/Body";
+import EndingPage from "./body-of-front/endingPage";
 
 
 export function App(){
@@ -9,8 +9,7 @@ export function App(){
   return(<div> 
     <Header/>
     <Body/>
-    <Widget/>
     <EndingPage/>
-  
+    <Widget/>
   </div>)
 }

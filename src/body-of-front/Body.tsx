@@ -5,7 +5,7 @@ function Body(){
     
     <div>
      <div className="title">
-        tecnologies
+    Tecnologies
     </div>
     <div className="languages bg-slate-50">
 
