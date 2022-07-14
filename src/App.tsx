@@ -1,15 +1,14 @@
 import { Widget } from "./components/Widget";
-import Header from "./body-of-front/Header"
-import Body from "./body-of-front/Body";
-import EndingPage from "./body-of-front/endingPage";
+
+import AppRoutes from "./appRoutes";
 
 
 export function App(){
 
-  return(<div> 
-    <Header/>
-    <Body/>
-    <EndingPage/>
+  return(
+  <div> 
+    <AppRoutes/>
     <Widget/>
-  </div>)
+  </div>
+  )
 }
