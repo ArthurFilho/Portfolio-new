@@ -62,9 +62,12 @@ font-family: 'Roboto Mono', monospace;
     flex-direction: column;
 }
 .imageplace{
-    width: 500px;
+    border: 5px solid #8257e6;
+    width: 400px;
     height: 300px;
-    background-color: white;
+    background-image: url(./assets/image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .textabout{
     display: flex;

@@ -1,11 +1,8 @@
-import { BrowserRouter } from "react-router-dom";
 import{
-    BrowserRouter as Router,
-    Route
+  BrowserRouter as Router, Route
 } from "react-router-dom";
+import Body from "./body-of-front/Body";
 
-import MainPage from "./mainPage"
-import ProjectPage from "./projectPage"
 
 const AppRoutes = () => {
   
@@ -16,8 +13,8 @@ return(
 <Router>
   
     
-      <Route  path="/" element={<MainPage/>} />
-      <Route  path="/projects" element={<ProjectPage/>}/>
+      <Route  path="/" element={<Body/>} />
+      
     
   
 </Router>

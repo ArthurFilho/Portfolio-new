@@ -1,4 +1,4 @@
-
+import imageAbout from "../assets/image.jpg"
 
 
 
@@ -13,11 +13,5 @@ return(<div>
     </div>
     </div>
     )
-
 }
-
-
-
-
-
 export default EndingPage;

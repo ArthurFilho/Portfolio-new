@@ -8,6 +8,7 @@ return(
     <Header/>
     <Body/>
     <EndingPage/>
+    <Widget/>
     </div>
 )
 }
