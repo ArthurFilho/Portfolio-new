@@ -1,13 +1,12 @@
-import { AppRoutes } from "./AppRoutes"
-import { BrowserRouter} from "react-router-dom";
-
-
+import Header from "./body-of-front/Header";
+import { AppRoutes } from "./AppRoutes";
 
 export function App(){
 
   return(
-  <BrowserRouter>
-   <AppRoutes/>
-  </BrowserRouter>
+      <> 
+     <Header/>
+     <AppRoutes/>
+      </>
   )
 }

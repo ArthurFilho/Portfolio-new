@@ -1,18 +1,16 @@
+import{BrowserRouter as Router,Route,Routes}from"react-router-dom";
+import Mainpage from "./MainPage"
+import Projectpage from "./Projectspage"
 
-import Header from "./body-of-front/Header";
-import { BrowserRouter as Router, Route, Navigate } from "react-router-dom";
-
-
-export const AppRoutes = () => {
-return(
-  <Router>
-
-  <Route  path="/" element={<h1>MAIN PAGE</h1>}/>
-  <Route path="*"  element={ <Navigate to="/" />}/>
-  </Router>
-
-)
+export const AppRoutes=()=>{
+  return(
+    <>
+ <Router>
+    <Routes>
+      <Route path="/"element={<Mainpage/>}/>
+      <Route path="/project"element={<Projectpage/>}/>
+    </Routes>
+ </Router>
+ </>
+  )
 };
-
-
-

@@ -1,13 +1,13 @@
 
 
-function Body(){
+function Bodypage(){
     return(
     
     <div>
      <div className="title">
     Tecnologies
     </div>
-    <div className="languages bg-slate-50">
+    <div className="languages">
 
 
 
@@ -26,4 +26,4 @@ function Body(){
 
 
 
-export default Body;
+export default Bodypage;

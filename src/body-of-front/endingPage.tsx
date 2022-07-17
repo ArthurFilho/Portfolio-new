@@ -1,17 +1,18 @@
-import imageAbout from "../assets/image.jpg"
 
 
-
-function EndingPage(){
+function Endingpage(){
 return(<div>
     <div className="about">
     <h1 className="title">About me</h1>
     <div className="boxtext">
-    <div className="imageplace"></div>
-    <div className="textAbout"> My name is Arthur, I am 18 years old. I am a dynamic person, punctual, solicitous, hardworking and mainly I try to improve myself and add knowledge in the area, I am in this area to grow and develop, always trying to improve every day. </div>
+    <div className="imageplace">
+    <div className="textAbout"> 
+    Meu nome é Arthur, tenho 18 anos. Sou uma pessoa dinâmica, pontual, solícita e principalmente procuro me aprimorar e agregar conhecimento na área, estou nessa área para crescer e me desenvolver, sempre tentando melhorar a cada dia. Minhas skills atuais são React.js, JavaScript, HTML, CSS, BOOTSTRAP, Node(Básico) e estou estudando typescript e react native.
+    </div>
+    </div>
     </div>
     </div>
     </div>
     )
 }
-export default EndingPage;
+export default Endingpage;
