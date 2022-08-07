@@ -1,17 +1,10 @@
-import Secondpage from "./body-of-front/SecondPage"
+import { SecondPage } from "./components/body-of-front/SecondPage"
 
-function Projectspage(){
+export function ProjectsPage(){
 return(
     <>
-    <Secondpage/>
+    <SecondPage/>
     </>
 )
 };
 
-
-
-
-
-
-
-export default Projectspage;

@@ -1,7 +1,4 @@
-import "../global.css"
-
-
- function Header(){
+export function Header(){
     return(
         <div>
             <div className=" title flex text-2xl  color: rgb(255 255 255) w-auto h-28 left-36 top-4 ">
@@ -35,4 +32,3 @@ import "../global.css"
 
 
 
-    export default Header;

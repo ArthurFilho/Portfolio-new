@@ -1,14 +1,14 @@
 // @ts-ignore
-import Bodypage from "./body-of-front/BodyPage";
+import BodyPage from "./components/body-of-front/Header";
 // @ts-ignore
-import Endingpage from "./body-of-front/endingPage";
+import EndingPage from "./components/body-of-front/Header";
 
-function Mainpage(){
+export function MainPage(){
 return(
 <>
 
-<Bodypage/>
-<Endingpage/>
+<BodyPage/>
+<EndingPage/>
 
 </>
 
@@ -19,4 +19,3 @@ return(
 
 
 // @ts-ignore
-export default Mainpage;

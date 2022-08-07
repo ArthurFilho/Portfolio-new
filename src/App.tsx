@@ -1,4 +1,4 @@
-import Header from "./body-of-front/Header";
+import {Header} from "./components/body-of-front/Header";
 import { AppRoutes } from "./AppRoutes";
 
 export function App(){

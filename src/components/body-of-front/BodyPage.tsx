@@ -1,6 +1,6 @@
 import react from "../assets/react.svg"
 
-function Bodypage(){
+export function Bodypage(){
     return(
     
     <div>
@@ -22,11 +22,3 @@ function Bodypage(){
 
 }
 
-
-
-
-
-
-
-
-export default Bodypage;
