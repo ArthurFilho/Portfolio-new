@@ -2,36 +2,35 @@ import { Widget } from "./components/Widget";
 
 export function App(){
   return(
-      <> 
-       <div>
-            <div>
-                <h1>
-                    Arthur Filho
-                </h1> 
-            
-                <div> 
-              
-                  <div>       
-                    Home 
-                  </div>
+      <div className="w-full flex"> 
+       <div className="flex items-center justify-between">
+                  
                   <div>
-                    Projects
+                      Arthur Filho
                   </div>
-                  <div>
-                    <a href="mailto:peraarthur2018@hotmail.com"> Contact</a>   
+
+                  <div className="flex gap-8">
+                    <div>       
+                      Home 
+                    </div>
+                    
+                    <div>
+                      Projects
+                    </div>
+                    
+                    <div>
+                      <a href="mailto:peraarthur2018@hotmail.com"> Contact</a>   
+                    </div>
                   </div>
                 
                 </div>
-            
-            </div>
-            
-        </div>
+        
         <div>
         <div className="languages">
         </div>
         </div>
 
         <Widget />
-      </>
+      </div>
   )
 }

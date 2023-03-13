@@ -1,29 +1,29 @@
-import ImageBugUrl from "../../assets/widget/Bug.svg"
-import ImageIdeaUrl from "../../assets/widget/Idea.svg"
-import ImageThoughtUrl from "../../assets/widget/Thought.svg"
 import { useState } from "react";
 import { FeedbackTypeStep } from "../Steps/FeedbackTypeStep";
 import { FeedbackContentStep } from "../Steps/FeedbackContentStep";
 import { FeedbackSuccessStep } from "../Steps/FeedbackSucessStep";
 
+import Bug from "../../assets/widget/Bug.svg"
+import Lightbulb from "../../assets/widget/Lightbulb.svg"
+import ChatCenteredDots from "../../assets/widget/ChatCenteredDots.svg"
 
 export const feedbackTypes = {
     BUG: { title: 'Problem',
            image: {
-               source: ImageBugUrl,
+               source: Bug,
                alt: 'Image in a bug',
            },
         },
     IDEA: { title: 'Idea',
             image: {
-               source: ImageIdeaUrl,
+               source: Lightbulb,
                alt: 'Image in a light bulb',
            },
         },
         
     OTHER: { title: 'Other',
            image: {
-               source: ImageThoughtUrl,
+               source: ChatCenteredDots,
                alt: 'Image in a baloon thought',
            },
         },
@@ -65,7 +65,7 @@ export function WidgetForm(){
         )}
           
 
-         <footer className="text-xs text-neutral-400 ">
+         <footer className="text-xs text-neutral-400">
          made by <a className="underline underline-offset-2" href="https://www.linkedin.com/in/arthur-filho/">Arthur Timóteo</a> with tutoring <a className="underline underline-offset-2"  href="https://rocketseat.com.br">Rocketseat</a>
          </footer>
        
