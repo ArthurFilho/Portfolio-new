@@ -10,7 +10,8 @@ font-family: 'Roboto Mono', monospace;
 }
 
 body{
-    @apply bg-[#09090A] text-zinc-100
+    background-color: #09090A; 
+    @apply text-zinc-100
 }
 .headerx{
     cursor: pointer;
