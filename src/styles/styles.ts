@@ -25,29 +25,35 @@ export const Dropdown = styled.div`
     gap: 5rem;
 `
 
-export const AboutMe = styled.div`
-    width: 60%;
+export const Presentation = styled.div`
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     margin-top: 100px;
     gap: 10px;
-    div {
-        width: 50%;
-    }
+    align-items: center;
+    justify-content: center;
     h1 {
-        font-size: 2rem;
+        font-size: 1.9rem;
     }
 
     strong {
         color: #AB222E;
     }
 
-    span {
-        width: 400px;
+    img {
+        width: 250px;
         height: 250px;
-        background-color: white;
+        object-fit: cover;
     }
+`
+
+export const ContainerTextAndPictures = styled.div`
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+
 `
 
 export const LogoTitle = styled.div`
@@ -62,4 +68,16 @@ export const Banner = styled.div`
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+`
+
+export const ContainerAboutMe = styled.div`
+
+`
+
+export const ContainerSocials = styled.div`
+    display: flex;
+    width: 60%;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
 `
