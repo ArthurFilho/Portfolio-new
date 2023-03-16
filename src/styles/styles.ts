@@ -71,7 +71,11 @@ export const Banner = styled.div`
 `
 
 export const ContainerAboutMe = styled.div`
-
+    margin: 50px;
+    display: flex;
+    width: 500px;
+    align-items: center;
+    justify-content: center;
 `
 
 export const ContainerSocials = styled.div`

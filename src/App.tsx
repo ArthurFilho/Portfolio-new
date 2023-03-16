@@ -66,8 +66,8 @@ export function App(){
 
                 
 
-                <Banner>
-                </Banner>
+                {/* <Banner>
+                </Banner> */}
 
                 <ContainerAboutMe>
                   <p>
