@@ -73,15 +73,34 @@ export const Banner = styled.div`
 export const ContainerAboutMe = styled.div`
     margin: 50px;
     display: flex;
-    width: 500px;
+    width: 50%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    span {
+        width: 300px;
+        height: 300px;
+        background-color: white;
+    }
 `
 
 export const ContainerSocials = styled.div`
     display: flex;
-    width: 60%;
     align-items: flex-start;
     justify-content: center;
     gap: 10px;
+`
+
+export const AboutMe = styled.div`
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    width: 50%;
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    p {
+        margin-bottom: 50px;
+    }
 `
