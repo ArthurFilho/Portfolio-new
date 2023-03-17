@@ -17,7 +17,6 @@ export const ContainerHeader = styled.div`
     align-items: center;
     justify-content: space-between;
     margin-top: 3rem;
-    
 `
 
 export const Dropdown = styled.div`
@@ -69,6 +68,15 @@ export const Banner = styled.div`
     background-size: cover;
 `
 
+export const ContainerAboutMeBackground = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(39 39 42);
+    margin: 50px;
+`
+
 export const ContainerAboutMe = styled.div`
     margin: 50px;
     display: flex;
@@ -80,13 +88,6 @@ export const ContainerAboutMe = styled.div`
         height: 300px;
         background-color: white;
     }
-`
-
-export const ContainerSocials = styled.div`
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 10px;
 `
 
 export const AboutMe = styled.div`
@@ -104,6 +105,13 @@ export const AboutMe = styled.div`
     }
 `
 
+export const ContainerSocials = styled.div`
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+`
+
 export const ContainerSkills = styled.div`
     display: flex;
     align-items: center;
@@ -114,11 +122,15 @@ export const ContainerSkills = styled.div`
     gap: 20px;
 
     div {
-        width: 200px;
-        height: 150px;
+        width: 100px;
+        height: 75px;
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 1px solid #AB222E ;
+        background-color: rgb(39 39 42);
+        border-radius: 15px;
+        img {
+            width: 50px;
+        }
     }
 `

@@ -1,5 +1,5 @@
 import { Widget } from "./components/Widget";
-import { ContainerSkills, AboutMe, Banner, ContainerAboutMe, ContainerAll, ContainerHeader, ContainerSocials, ContainerTextAndPictures, Dropdown, LogoTitle, Presentation } from "./styles/styles";
+import { ContainerSkills, AboutMe, Banner, ContainerAboutMe, ContainerAll, ContainerHeader, ContainerSocials, ContainerTextAndPictures, Dropdown, LogoTitle, Presentation, ContainerAboutMeBackground } from "./styles/styles";
 
 import ArthurPicture from "./assets/Arthur.jpeg"
 
@@ -117,43 +117,45 @@ export function App(){
                 {/* <Banner>
                 </Banner> */}
 
+              <ContainerAboutMeBackground>
                 <ContainerAboutMe>
 
-                  <span></span> 
+                    <span></span> 
 
-                  <AboutMe>
-                    <p>
-                        Eu sou um desenvolvedor frontend capaz de criar soluções inovadoras e proporcionar uma 
-                        experiência única aos usuários. Meu comprometimento e dedicação constantes me permitem 
-                        aprimorar minhas habilidades e buscar sempre a excelência em cada projeto desenvolvido. 
-                        Eu sempre busco ter criatividade e determinação para alcançar os objetivos propostos.
-                    </p>
+                    <AboutMe>
+                      <p>
+                          Eu sou um desenvolvedor frontend capaz de criar soluções inovadoras e proporcionar uma 
+                          experiência única aos usuários. Meu comprometimento e dedicação constantes me permitem 
+                          aprimorar minhas habilidades e buscar sempre a excelência em cada projeto desenvolvido. 
+                          Eu sempre busco ter criatividade e determinação para alcançar os objetivos propostos.
+                      </p>
 
 
-                    <div>
-                      <ul>
-                        <li>
-                          Nome: Arthur 
-                        </li>
+                      <div>
+                        <ul>
+                          <li>
+                            Nome: Arthur 
+                          </li>
 
-                        <li>
-                          Idade: 18 
-                        </li>
-                      </ul>
-                      <ul>
-                        <li>
-                          Contato: peraarthur2018@gmail.com
-                        </li>
+                          <li>
+                            Idade: 18 
+                          </li>
+                        </ul>
+                        <ul>
+                          <li>
+                            Contato: peraarthur2018@gmail.com
+                          </li>
 
-                        <li>
-                          Endereço: Sergipe - Aracaju
-                        </li>
-                      </ul>
-                    </div>
-                  </AboutMe>
-                  
-                  
+                          <li>
+                            Endereço: Sergipe - Aracaju
+                          </li>
+                        </ul>
+                      </div>
+                    </AboutMe>
+
+
                 </ContainerAboutMe>
+              </ContainerAboutMeBackground>
 
                 <ContainerSkills>
               
