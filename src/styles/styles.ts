@@ -12,7 +12,7 @@ export const ContainerAll = styled.div`
 `
 
 export const ContainerHeader = styled.div`
-    width: 50%;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -50,10 +50,9 @@ export const Presentation = styled.div`
 
 export const ContainerTextAndPictures = styled.div`
     display: flex;
-    width: 50%;
+    width: 60%;
     align-items: center;
-    justify-content: space-between;
-
+    gap: 20px;
 `
 
 export const LogoTitle = styled.div`
@@ -73,7 +72,7 @@ export const Banner = styled.div`
 export const ContainerAboutMe = styled.div`
     margin: 50px;
     display: flex;
-    width: 50%;
+    width: 60%;
     align-items: center;
     justify-content: space-between;
     span {
@@ -102,5 +101,24 @@ export const AboutMe = styled.div`
     }
     p {
         margin-bottom: 50px;
+    }
+`
+
+export const ContainerSkills = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 60%;
+    margin-bottom: 50px;
+    gap: 20px;
+
+    div {
+        width: 200px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #AB222E ;
     }
 `

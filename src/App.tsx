@@ -1,11 +1,59 @@
 import { Widget } from "./components/Widget";
-import { AboutMe, Banner, ContainerAboutMe, ContainerAll, ContainerHeader, ContainerSocials, ContainerTextAndPictures, Dropdown, LogoTitle, Presentation } from "./styles/styles";
+import { ContainerSkills, AboutMe, Banner, ContainerAboutMe, ContainerAll, ContainerHeader, ContainerSocials, ContainerTextAndPictures, Dropdown, LogoTitle, Presentation } from "./styles/styles";
 
 import ArthurPicture from "./assets/Arthur.jpeg"
 
+import Html from "./assets/skills/html.png"
+import Css from "./assets/skills/css.png"
+import FireBase from "./assets/skills/firebase.png"
+import JS from "./assets/skills/javascript.png"
+import Node from "./assets/skills/node.png"
+import React from "./assets/skills/react.png"
+import Sass from "./assets/skills/sass.png"
+import Mongo from "./assets/skills/mongo.png"
+import Jquery from "./assets/skills/jquery.png"
+import TypeScript from "./assets/skills/typescript.png"
+
 import { GithubLogo, InstagramLogo, TwitterLogo, LinkedinLogo } from "phosphor-react"
+
+const MySkills = [
+  {
+    imgUrl: Html,
+  },
+  {
+    imgUrl: Css,
+  },
+  {
+    imgUrl: JS,
+  },
+  {
+    imgUrl: React,
+  },
+  {
+    imgUrl: React,
+  },
+  {
+    imgUrl: TypeScript,
+  },
+  {
+    imgUrl: Node,
+  },
+  {
+    imgUrl: Sass,
+  },
+  {
+    imgUrl: Mongo,
+  },
+  {
+    imgUrl: Jquery,
+  },
+  {
+    imgUrl: FireBase,
+  },
+]
  
 export function App(){
+  
   return(
       <ContainerAll> 
 
@@ -106,6 +154,18 @@ export function App(){
                   
                   
                 </ContainerAboutMe>
+
+                <ContainerSkills>
+              
+                {MySkills.map((Skills) => {
+                  return(
+                    <div>
+                      <img src={Skills.imgUrl} alt="" />
+                    </div>
+                  )
+                })}
+              
+                </ContainerSkills>
 
         <Widget />
       </ContainerAll>
