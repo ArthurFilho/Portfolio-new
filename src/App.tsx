@@ -1,5 +1,5 @@
 import { Widget } from "./components/Widget";
-import { ContainerSkills, AboutMe, Banner, ContainerAboutMe, ContainerAll, ContainerHeader, ContainerSocials, ContainerTextAndPictures, Dropdown, LogoTitle, Presentation, ContainerAboutMeBackground } from "./styles/styles";
+import { ContainerProjects, ContainerSkills, AboutMe, Banner, ContainerAboutMe, ContainerAll, ContainerHeader, ContainerSocials, ContainerTextAndPictures, Dropdown, LogoTitle, Presentation, ContainerAboutMeBackground, Projects } from "./styles/styles";
 
 import ArthurPicture from "./assets/Arthur.jpeg"
 
@@ -18,36 +18,47 @@ import { GithubLogo, InstagramLogo, TwitterLogo, LinkedinLogo } from "phosphor-r
 
 const MySkills = [
   {
+    title: "Html",
     imgUrl: Html,
   },
   {
+    title: "Css",
     imgUrl: Css,
   },
   {
+    title: "JS",
     imgUrl: JS,
   },
   {
+    title: "React",
     imgUrl: React,
   },
   {
+    title: "ReactNative",
     imgUrl: React,
   },
   {
+    title: "TypeScript",
     imgUrl: TypeScript,
   },
   {
+    title: "Node",
     imgUrl: Node,
   },
   {
+    title: "Sass",
     imgUrl: Sass,
   },
   {
+    title: "Mongo",
     imgUrl: Mongo,
   },
   {
+    title: "Jquery",
     imgUrl: Jquery,
   },
   {
+    title: "FireBase",
     imgUrl: FireBase,
   },
 ]
@@ -161,13 +172,40 @@ export function App(){
               
                 {MySkills.map((Skills) => {
                   return(
-                    <div>
-                      <img src={Skills.imgUrl} alt="" />
-                    </div>
+                      <div>
+                        <img src={Skills.imgUrl} alt="" />
+                        <h1>{Skills.title}</h1>
+                      </div>
                   )
                 })}
               
                 </ContainerSkills>
+
+                <ContainerProjects>
+
+                  <h1>Projetos Feitos</h1>
+                  
+                  <Projects>
+
+                    <div>
+                    
+                    </div>
+  
+                    <div>
+                      
+                    </div>
+                    
+                    <div>
+                      
+                    </div>
+  
+                    <div>
+                      
+                    </div>
+
+                  </Projects>
+
+                </ContainerProjects>
 
         <Widget />
       </ContainerAll>

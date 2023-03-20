@@ -91,6 +91,7 @@ export const ContainerAboutMe = styled.div`
 `
 
 export const AboutMe = styled.div`
+    margin: 50px;
     display: flex;
     flex-direction: column;
     font-size: 12px;
@@ -122,15 +123,37 @@ export const ContainerSkills = styled.div`
     gap: 20px;
 
     div {
-        width: 100px;
+        width: 150px;
         height: 75px;
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: rgb(39 39 42);
         border-radius: 15px;
+        flex-direction: column;
         img {
             width: 50px;
         }
+    }
+`
+
+export const ContainerProjects = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+
+`
+
+export const Projects = styled.div`
+    display: flex;
+    gap: 10px;
+    div {
+        width: 300px;
+        height: 150px;
+        background-color: rgb(39 39 42);
     }
 `
