@@ -15,6 +15,8 @@ import Jquery from "./assets/skills/jquery.png"
 import TypeScript from "./assets/skills/typescript.png"
 
 import { GithubLogo, InstagramLogo, TwitterLogo, LinkedinLogo } from "phosphor-react"
+import { useEffect, useState } from "react";
+import { api } from "./lib/axios";
 
 const MySkills = [
   {
@@ -64,6 +66,18 @@ const MySkills = [
 ]
  
 export function App(){
+
+  const [ repos, setRepos ] = useState()
+
+ useEffect(() => {
+  async function ReposInfo() {
+    
+    const response = await api.get(`users/ArthurFilho/repos`)
+
+    setRepos(response.data)
+  }
+  ReposInfo()
+ }, [])
   
   return(
       <ContainerAll> 
@@ -187,21 +201,13 @@ export function App(){
                   
                   <Projects>
 
-                    <div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
                     
-                    </div>
-  
-                    <div>
-                      
-                    </div>
-                    
-                    <div>
-                      
-                    </div>
-  
-                    <div>
-                      
-                    </div>
 
                   </Projects>
 

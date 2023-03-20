@@ -145,15 +145,22 @@ export const ContainerProjects = styled.div`
     align-items: center;
     justify-content: center;
     margin: 50px;
-
+        h1 {
+            width: 50%;
+            margin: 50px;
+    }
 `
 
 export const Projects = styled.div`
     display: flex;
-    gap: 10px;
+    width: 75%;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     div {
-        width: 300px;
-        height: 150px;
+        width: 400px;
+        height: 200px;
         background-color: rgb(39 39 42);
     }
 `
