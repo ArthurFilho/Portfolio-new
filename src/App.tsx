@@ -70,6 +70,7 @@ export function App(){
   const [ repos, setRepos ] = useState()
 
  useEffect(() => {
+  
   async function ReposInfo() {
     
     const response = await api.get(`users/ArthurFilho/repos`)
@@ -77,8 +78,9 @@ export function App(){
     setRepos(response.data)
   }
   ReposInfo()
- }, [])
-  
+ 
+}, [])
+
   return(
       <ContainerAll> 
 
@@ -125,19 +127,17 @@ export function App(){
                     
                   <ContainerSocials>
                     
-                    <a href="https://github.com/ArthurFilho"><GithubLogo size={24} /></a> 
+                    <a href="https://github.com/ArthurFilho"> <GithubLogo size={24} /> </a> 
                     
-                    <a href="https://www.linkedin.com/in/arthur-filho/"><LinkedinLogo size={24} /></a>
+                    <a href="https://www.linkedin.com/in/arthur-filho/"> <LinkedinLogo size={24} /> </a>
                     
-                    <a href="https://www.instagram.com/4rthur.tutu/"><InstagramLogo size={24} /> </a>
+                    <a href="https://www.instagram.com/4rthur.tutu/"> <InstagramLogo size={24} /> </a>
                     
-                    <a href="https://twitter.com/timoteo_arthur"><TwitterLogo size={24} /></a>
+                    <a href="https://twitter.com/timoteo_arthur"> <TwitterLogo size={24} /> </a>
                     
                   </ContainerSocials>
                  
                 </Presentation>
-
-                
 
                 {/* <Banner>
                 </Banner> */}
@@ -200,15 +200,17 @@ export function App(){
                   <h1>Projetos Feitos</h1>
                   
                   <Projects>
-
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    
-
+                    {repos?.map((reposC:any)=> {
+                      return(
+                          <a key={reposC.id} href={reposC.html_url}>
+                            <div>
+                            
+                            <p>{reposC.name}</p>
+                            
+                            </div>
+                          </a>
+                      )
+                    })}
                   </Projects>
 
                 </ContainerProjects>

@@ -111,6 +111,10 @@ export const ContainerSocials = styled.div`
     align-items: flex-start;
     justify-content: center;
     gap: 10px;
+
+    a:hover {
+        color: #AB222E;
+    }
 `
 
 export const ContainerSkills = styled.div`
@@ -119,7 +123,7 @@ export const ContainerSkills = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     width: 60%;
-    margin-bottom: 50px;
+    margin-top: 50px;
     gap: 20px;
 
     div {
@@ -128,7 +132,6 @@ export const ContainerSkills = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: rgb(39 39 42);
         border-radius: 15px;
         flex-direction: column;
         img {
@@ -146,14 +149,14 @@ export const ContainerProjects = styled.div`
     justify-content: center;
     margin: 50px;
         h1 {
-            width: 50%;
+            width: 80%;
             margin: 50px;
     }
 `
 
 export const Projects = styled.div`
     display: flex;
-    width: 75%;
+    width: 90%;
     gap: 20px;
     flex-wrap: wrap;
     align-items: center;
@@ -162,5 +165,17 @@ export const Projects = styled.div`
         width: 400px;
         height: 200px;
         background-color: rgb(39 39 42);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    div:hover {
+        transform:scale(1.09,1.09);
+    }
+
+    img {
+        width: 50px;
     }
 `
