@@ -1,5 +1,5 @@
 import { Widget } from "./components/Widget";
-import { ContainerProjects, ContainerSkills, AboutMe, Banner, ContainerAboutMe, ContainerAll, ContainerHeader, ContainerSocials, ContainerTextAndPictures, Dropdown, LogoTitle, Presentation, ContainerAboutMeBackground, Projects, ImgProjects } from "./styles/styles";
+import { ContainerProjects, ContainerSkills, AboutMe, Banner, ContainerAboutMe, ContainerAll, ContainerHeader, ContainerSocials, ContainerTextAndPictures, Dropdown, LogoTitle, Presentation, ContainerAboutMeBackground, Projects, ImgProjects, ContainerButtonsProjects } from "./styles/styles";
 
 import ArthurPicture from "./assets/Arthur.jpeg"
 
@@ -23,6 +23,8 @@ import NetworkigFeed from "./assets/projects/networking-feed.png"
 import IgniteShop from "./assets/projects/ig-news.png"
 import PomodoroTimer from "./assets/projects/PomodoroTimer.png"
 import FinancialController from "./assets/projects/financial-controller.png"
+
+import Typical from "react-typical"
 
 import { GithubLogo, InstagramLogo, TwitterLogo, LinkedinLogo } from "phosphor-react"
 import { useState } from "react";
@@ -146,6 +148,7 @@ const MyProjects : Array<projectProps> = [
     projectName: "WatchMe",
     imgUrl: WatchMe,
     urlGithub: "",
+    repoUrl: "",
   },
   {
     id: 7,
@@ -166,6 +169,7 @@ const MyProjects : Array<projectProps> = [
     projectName: "Financial Controller",
     imgUrl: FinancialController,
     urlGithub: "",
+    repoUrl: "",
   },
 ]
  
@@ -201,12 +205,16 @@ export function App(){
                   </Dropdown>
                 
                 </ContainerHeader>
-
+                 
                 <Presentation id="home">
                   <ContainerTextAndPictures>
                     <div>
                       <h1>
-                        Olá, meu nome é <strong>Arthur</strong> 😎
+                        <Typical
+                          steps={['Hello, my name is Arthur 😎', 2000, 'Olá, meu nome é Arthur 😎', 2000]}
+                          loop={Infinity}
+                          wrapper="p"
+                        />
                       </h1>
 
                       <p>
@@ -305,19 +313,27 @@ export function App(){
                   <Projects>
                     {MyProjects.map((repos)=> {
                       return(
-                          <a key={repos.id} href={repos.repoUrl}>
                             <div onMouseOver={() => {setHoverProjects(repos.id)}} onMouseOut={() => {setHoverProjects(0)}} key={repos.id}>
                             {hoverProjects == repos.id ? 
                             <>
                               <ImgProjects src={repos.imgUrl} alt="" />
-                              <p>{repos.projectName}</p>
+                              
+                              <ContainerButtonsProjects> 
+                                <p>{repos.projectName}</p>
+                                <div>
+                                  
+                                  <a href={repos.urlGithub}>Github</a> 
+
+                                  {repos.repoUrl == '' ? '' : <a href={repos.repoUrl}>Site no Ar</a>}
+                            
+                                </div>
+                              </ContainerButtonsProjects>
                             </>
                             :
                             <img src={repos.imgUrl} alt="" />
                           }
                               
                             </div>
-                          </a>
                       )
                     })}
                   </Projects>

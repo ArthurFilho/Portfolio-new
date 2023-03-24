@@ -201,7 +201,26 @@ export const Projects = styled.div`
 export const ImgProjects = styled.img`
     opacity: 0.3;
 `
-
+export const ContainerButtonsProjects = styled.div`
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+     p {
+        margin-bottom: 100px;
+     }
+     div {
+        gap: 30px;
+     }
+     a {
+        background: rgb(39 39 42);
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+     }
+     a:hover {
+        background-color: #09090A;
+     }
+`
 
 
 
