@@ -22,6 +22,13 @@ export const ContainerHeader = styled.div`
 export const Dropdown = styled.div`
     display: flex;
     gap: 5rem;
+    
+    div {
+        transition: all 0.3s;
+    }
+    div:hover {
+        color: #AB222E;
+    }
 `
 
 export const Presentation = styled.div`
@@ -128,7 +135,8 @@ export const ContainerSkills = styled.div`
 
     div {
         width: 150px;
-        height: 75px;
+        height: 125px;
+        background-color: rgb(39 39 42);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -138,6 +146,7 @@ export const ContainerSkills = styled.div`
         margin: 10px;
         img {
             width: 50px;
+            margin-bottom: 10px;
         }
     }
 `
@@ -166,7 +175,6 @@ export const Projects = styled.div`
     div {
         width: 400px;
         height: 200px;
-        background-color: rgb(39 39 42);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -175,6 +183,9 @@ export const Projects = styled.div`
         img {
             width: 100%;
             object-fit: cover;
+        }
+        p {
+            position: absolute;
         }
     }
 
@@ -186,3 +197,11 @@ export const Projects = styled.div`
         width: 50px;
     }
 `
+
+export const ImgProjects = styled.img`
+    opacity: 0.3;
+`
+
+
+
+

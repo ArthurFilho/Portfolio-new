@@ -1,5 +1,5 @@
 import { Widget } from "./components/Widget";
-import { ContainerProjects, ContainerSkills, AboutMe, Banner, ContainerAboutMe, ContainerAll, ContainerHeader, ContainerSocials, ContainerTextAndPictures, Dropdown, LogoTitle, Presentation, ContainerAboutMeBackground, Projects } from "./styles/styles";
+import { ContainerProjects, ContainerSkills, AboutMe, Banner, ContainerAboutMe, ContainerAll, ContainerHeader, ContainerSocials, ContainerTextAndPictures, Dropdown, LogoTitle, Presentation, ContainerAboutMeBackground, Projects, ImgProjects } from "./styles/styles";
 
 import ArthurPicture from "./assets/Arthur.jpeg"
 
@@ -20,123 +20,160 @@ import GithubBlog from "./assets/projects/github-blog.png"
 import ModaSalurt from "./assets/projects/moda-salurt.png"
 import WatchMe from "./assets/projects/watchMe.png"
 import NetworkigFeed from "./assets/projects/networking-feed.png"
-import IgniteNews from "./assets/projects/ig-news.png"
+import IgniteShop from "./assets/projects/ig-news.png"
 import PomodoroTimer from "./assets/projects/PomodoroTimer.png"
 import FinancialController from "./assets/projects/financial-controller.png"
 
 import { GithubLogo, InstagramLogo, TwitterLogo, LinkedinLogo } from "phosphor-react"
+import { useState } from "react";
 
-const MySkills = [
+interface skillsProps {
+  id: number,
+  title: string,
+  imgUrl: string,
+  experience: string,
+}
+
+interface projectProps {
+  id: number,
+  projectName: string,
+  repoUrl?: string,
+  imgUrl: string,
+  urlGithub: string,
+}
+
+const MySkills : Array<skillsProps> = [
   {
+    id: 1,
     title: "Html",
     imgUrl: Html,
     experience: "1 Ano e Meio",
   },
   {
+    id: 2,
     title: "Css",
     imgUrl: Css,
     experience: "1 Ano e Meio",
   },
   {
+    id: 3,
     title: "JS",
     imgUrl: JS,
     experience: "1 Ano e Meio",
   },
   {
+    id: 4,
     title: "React",
     imgUrl: React,
     experience: "1 Ano",
   },
   {
-    title: "ReactNative",
+    id: 5,
+    title: "React Native",
     imgUrl: React,
     experience: "1 Ano ",
   },
   {
+    id: 6,
     title: "TypeScript",
     imgUrl: TypeScript,
     experience: "1 Ano",
   },
   {
+    id: 7,
     title: "Node",
     imgUrl: Node,
     experience: "1 Ano",
   },
   {
+    id: 8,
     title: "Mongo",
     imgUrl: Mongo,
     experience: "1 ano",
   },
   {
+    id: 9,
     title: "Jquery",
     imgUrl: Jquery,
     experience: "1 ano",
   },
   {
+    id: 10,
     title: "FireBase",
     imgUrl: FireBase,
     experience: "1 ano",
   },
 ]
 
-const MyProjects = [
+const MyProjects : Array<projectProps> = [
   {
     id: 1,
     projectName: "Coffee Delivery",
     imgUrl: CoffeeDelivery,
-    repoUrl: "",
+    repoUrl: "https://coffees-delivery.netlify.app",
+    urlGithub: "",
   },
   {
     id: 2,
     projectName: "Moda Salurt",
     imgUrl: ModaSalurt,
-    repoUrl: "",
+    repoUrl: "https://moda-salurt.netlify.app",
+    urlGithub: "",
   },
   {
     id: 3,
     projectName: "Auto Spo",
     imgUrl: AutoSpo,
-    repoUrl: "",
+    repoUrl: "https://auto-spo.netlify.app",
+    urlGithub: "",
   },
   {
     id: 4,
     projectName: "Networkig Feed",
     imgUrl: NetworkigFeed,
-    repoUrl: "",
+    repoUrl: "https://networking-feed.netlify.app",
+    urlGithub: "",
   },
   {
     id: 5,
     projectName: "Github Blog",
     imgUrl: GithubBlog,
-    repoUrl: "",
+    repoUrl: "https://github-blog-challenger.netlify.app",
+    urlGithub: "",
   },
   {
     id: 6,
     projectName: "WatchMe",
     imgUrl: WatchMe,
-    repoUrl: "",
+    urlGithub: "",
   },
   {
     id: 7,
-    projectName: "Ignite News",
-    imgUrl: IgniteNews,
+    projectName: "Ignite Shop",
+    imgUrl: IgniteShop,
     repoUrl: "",
+    urlGithub: "",
   },
   {
     id: 8,
     projectName: "Pomodoro Timer",
     imgUrl: PomodoroTimer,
-    repoUrl: "",
+    repoUrl: "https://pomodorotimerp.netlify.app",
+    urlGithub: "",
   },
   {
     id: 9,
     projectName: "Financial Controller",
     imgUrl: FinancialController,
-    repoUrl: "",
+    urlGithub: "",
   },
 ]
  
 export function App(){
+
+  const [hoverProjects, setHoverProjects] = useState(0)
+
+  const [hoverSkills, setHoverSkills] = useState(0)
 
   return(
       <ContainerAll> 
@@ -150,22 +187,22 @@ export function App(){
                   <Dropdown>
                     
                     <div>       
-                      Home 
+                     <a href="#home">Home</a>
                     </div>
                     
                     <div>
-                      Projects
+                      <a href="#projects">Projetos</a>
                     </div>
                     
                     <div>
-                      <a href="mailto:peraarthur2018@hotmail.com"> Contact</a>   
+                      <a href="mailto:peraarthur2018@hotmail.com"> Contato</a>   
                     </div>
 
                   </Dropdown>
                 
                 </ContainerHeader>
 
-                <Presentation>
+                <Presentation id="home">
                   <ContainerTextAndPictures>
                     <div>
                       <h1>
@@ -243,17 +280,25 @@ export function App(){
               
                 {MySkills.map((Skills) => {
                   return(
-                      <div>
-                        <img src={Skills.imgUrl} alt="" />
-                        <h1>{Skills.title}</h1>
-                        <p>{Skills.experience}</p>
+                      <div onMouseOver={() => {setHoverSkills(Skills.id)}} onMouseOut={() => {setHoverSkills(0)}} key={Skills.id}>
+                        {hoverSkills == Skills.id ? 
+                        <>
+                          <img src={Skills.imgUrl} alt="" />
+                          <h1>{Skills.experience}</h1>
+                        </>
+                        : 
+                        <>
+                          <img src={Skills.imgUrl} alt="" />
+                          <p>{Skills.title}</p>
+                        </>
+                        }
                       </div>
                   )
                 })}
-              
+                              
                 </ContainerSkills>
 
-                <ContainerProjects>
+                <ContainerProjects id="projects">
 
                   <h1>Projetos Feitos</h1>
                   
@@ -261,9 +306,16 @@ export function App(){
                     {MyProjects.map((repos)=> {
                       return(
                           <a key={repos.id} href={repos.repoUrl}>
-                            <div>
-                              <img src={repos.imgUrl} alt="" />
-                              {/* <p>{repos.projectName}</p> */}
+                            <div onMouseOver={() => {setHoverProjects(repos.id)}} onMouseOut={() => {setHoverProjects(0)}} key={repos.id}>
+                            {hoverProjects == repos.id ? 
+                            <>
+                              <ImgProjects src={repos.imgUrl} alt="" />
+                              <p>{repos.projectName}</p>
+                            </>
+                            :
+                            <img src={repos.imgUrl} alt="" />
+                          }
+                              
                             </div>
                           </a>
                       )
