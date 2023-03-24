@@ -134,6 +134,8 @@ export const ContainerSkills = styled.div`
         justify-content: center;
         border-radius: 15px;
         flex-direction: column;
+        padding: 10px;
+        margin: 10px;
         img {
             width: 50px;
         }
@@ -169,6 +171,11 @@ export const Projects = styled.div`
         align-items: center;
         justify-content: center;
         transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
     }
 
     div:hover {
