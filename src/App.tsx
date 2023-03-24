@@ -1,5 +1,5 @@
 import { Widget } from "./components/Widget";
-import { ContainerProjects, ContainerSkills, AboutMe, Banner, ContainerAboutMe, ContainerAll, ContainerHeader, ContainerSocials, ContainerTextAndPictures, Dropdown, LogoTitle, Presentation, ContainerAboutMeBackground, Projects, ImgProjects, ContainerButtonsProjects } from "./styles/styles";
+import { ContainerProjects, ContainerSkills, AboutMe, Banner, ContainerAboutMe, ContainerAll, ContainerHeader, ContainerSocials, ContainerTextAndPictures, Dropdown, LogoTitle, Presentation, ContainerAboutMeBackground, Projects, ImgProjects, ContainerButtonsProjects, ContainerExperienceSkill } from "./styles/styles";
 
 import ArthurPicture from "./assets/Arthur.jpeg"
 
@@ -290,10 +290,11 @@ export function App(){
                   return(
                       <div onMouseOver={() => {setHoverSkills(Skills.id)}} onMouseOut={() => {setHoverSkills(0)}} key={Skills.id}>
                         {hoverSkills == Skills.id ? 
-                        <>
+                        <ContainerExperienceSkill>
                           <img src={Skills.imgUrl} alt="" />
+                          <p>{Skills.title}</p>
                           <h1>{Skills.experience}</h1>
-                        </>
+                        </ContainerExperienceSkill>
                         : 
                         <>
                           <img src={Skills.imgUrl} alt="" />

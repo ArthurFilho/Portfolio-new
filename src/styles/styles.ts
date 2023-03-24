@@ -151,6 +151,21 @@ export const ContainerSkills = styled.div`
     }
 `
 
+export const ContainerExperienceSkill = styled.div`
+    
+    img {
+        opacity: 0.1;
+    }
+
+    p {
+        opacity: 0.1;
+    }
+    
+    h1 {
+        position: absolute;
+    }
+`
+
 export const ContainerProjects = styled.div`
     width: 100%;
     height: 100%;
