@@ -24,8 +24,6 @@ import IgniteShop from "./assets/projects/ig-news.png"
 import PomodoroTimer from "./assets/projects/PomodoroTimer.png"
 import FinancialController from "./assets/projects/financial-controller.png"
 
-import Typical from "react-typical"
-
 import { GithubLogo, InstagramLogo, TwitterLogo, LinkedinLogo } from "phosphor-react"
 import { useState } from "react";
 
@@ -210,11 +208,9 @@ export function App(){
                   <ContainerTextAndPictures>
                     <div>
                       <h1>
-                        <Typical
-                          steps={['Hello, my name is Arthur 😎', 2000, 'Olá, meu nome é Arthur 😎', 2000]}
-                          loop={Infinity}
-                          wrapper="p"
-                        />
+
+                      Olá, meu nome é Arthur 😎
+                       
                       </h1>
 
                       <p>
@@ -261,7 +257,7 @@ export function App(){
                       <div>
                         <ul>
                           <li>
-                            Nome: Arthur 
+                            Nome: Arthur Filho
                           </li>
 
                           <li>
