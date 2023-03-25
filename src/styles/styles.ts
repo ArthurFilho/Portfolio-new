@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import Banner1 from "../assets/banner.jpg"
+import Banner1 from "../assets/banner.png"
 
 export const ContainerAll = styled.div`
     width: 100%;
@@ -67,7 +67,7 @@ export const LogoTitle = styled.div`
 
 export const Banner = styled.div`
     margin-top: 50px;
-    height: 300px;
+    height: 250px;
     width: 100%;
     background-image: url(${Banner1});
     background-repeat: no-repeat;
@@ -81,7 +81,7 @@ export const ContainerAboutMeBackground = styled.div`
     align-items: center;
     justify-content: center;
     background-color: rgb(39 39 42);
-    margin: 50px;
+    margin-bottom: 50px;
 `
 
 export const ContainerAboutMe = styled.div`
@@ -144,6 +144,7 @@ export const ContainerSkills = styled.div`
         flex-direction: column;
         padding: 10px;
         margin: 10px;
+        cursor: pointer;
         img {
             width: 50px;
             margin-bottom: 10px;
@@ -233,7 +234,7 @@ export const ContainerButtonsProjects = styled.div`
         cursor: pointer;
      }
      a:hover {
-        background-color: #09090A;
+        background-color: #AB222E;
      }
 `
 

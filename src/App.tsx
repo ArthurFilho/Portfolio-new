@@ -25,7 +25,12 @@ import FinancialController from "./assets/projects/financial-controller.png"
 
 import TypeIt from "typeit-react";
 
-import { GithubLogo, InstagramLogo, TwitterLogo, LinkedinLogo } from "phosphor-react"
+import Curriculo from "./documents/curriculo.pdf"
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+import { GithubLogo, InstagramLogo, TwitterLogo, LinkedinLogo, FileArrowDown } from "phosphor-react"
 import { useState } from "react";
 
 interface skillsProps {
@@ -48,37 +53,37 @@ const MySkills : Array<skillsProps> = [
     id: 1,
     title: "Html",
     imgUrl: Html,
-    experience: "1 Ano e Meio",
+    experience: "2 Anos",
   },
   {
     id: 2,
     title: "Css",
     imgUrl: Css,
-    experience: "1 Ano e Meio",
+    experience: "2 Anos",
   },
   {
     id: 3,
     title: "JS",
     imgUrl: JS,
-    experience: "1 Ano e Meio",
+    experience: "2 Anos",
   },
   {
     id: 4,
     title: "React",
     imgUrl: React,
-    experience: "1 Ano",
+    experience: "1 Ano e meio",
   },
   {
     id: 5,
     title: "React Native",
     imgUrl: React,
-    experience: "1 Ano ",
+    experience: "1 Ano",
   },
   {
     id: 6,
     title: "TypeScript",
     imgUrl: TypeScript,
-    experience: "1 Ano",
+    experience: "1 ano e meio",
   },
   {
     id: 7,
@@ -178,6 +183,10 @@ export function App(){
 
   const [hoverSkills, setHoverSkills] = useState(0)
 
+  AOS.init({
+    duration: 500,
+  });
+
   return(
       <ContainerAll> 
 
@@ -244,11 +253,11 @@ export function App(){
                  
                 </Presentation>
 
-                {/* <Banner>
-                </Banner> */}
+                <Banner>
+                </Banner>
 
               <ContainerAboutMeBackground>
-                <ContainerAboutMe>
+                <ContainerAboutMe data-aos="zoom-in">
 
                     <span></span> 
 
@@ -283,6 +292,9 @@ export function App(){
                       </div>
                     </AboutMe>
 
+                  <div>
+                    <a href={Curriculo} download="Curriculo"> Currículo <FileArrowDown size={24} /> </a>
+                  </div>
 
                 </ContainerAboutMe>
               </ContainerAboutMeBackground>
@@ -291,7 +303,7 @@ export function App(){
               
                 {MySkills.map((Skills) => {
                   return(
-                      <div onMouseOver={() => {setHoverSkills(Skills.id)}} onMouseOut={() => {setHoverSkills(0)}} key={Skills.id}>
+                      <div data-aos="flip-up" onMouseOver={() => {setHoverSkills(Skills.id)}} onMouseOut={() => {setHoverSkills(0)}} key={Skills.id}>
                         {hoverSkills == Skills.id ? 
                         <ContainerExperienceSkill>
                           <img src={Skills.imgUrl} alt="" />
@@ -317,7 +329,7 @@ export function App(){
                   <Projects>
                     {MyProjects.map((repos)=> {
                       return(
-                            <div onMouseOver={() => {setHoverProjects(repos.id)}} onMouseOut={() => {setHoverProjects(0)}} key={repos.id}>
+                            <div data-aos="fade-right" onMouseOver={() => {setHoverProjects(repos.id)}} onMouseOut={() => {setHoverProjects(0)}} key={repos.id}>
                             {hoverProjects == repos.id ? 
                             <>
                               <ImgProjects src={repos.imgUrl} alt="" />
