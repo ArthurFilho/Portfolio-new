@@ -4,7 +4,7 @@ import { FeedbackContentStep } from "../Steps/FeedbackContentStep";
 import { FeedbackSuccessStep } from "../Steps/FeedbackSucessStep";
 
 import Bug from "../../assets/widget/Bug.svg"
-import Lightbulb from "../../assets/widget/Lightbulb.svg"
+import Lightbulb from "../../assets/widget/lightbulb.svg"
 import ChatCenteredDots from "../../assets/widget/ChatCenteredDots.svg"
 
 export const feedbackTypes = {
