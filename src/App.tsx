@@ -116,63 +116,63 @@ const MyProjects : Array<projectProps> = [
     id: 1,
     projectName: "Coffee Delivery",
     imgUrl: CoffeeDelivery,
+    urlGithub: "https://github.com/ArthurFilho/coffee-Delivery-Challenger",
     repoUrl: "https://coffees-delivery.netlify.app",
-    urlGithub: "",
   },
   {
     id: 2,
     projectName: "Moda Salurt",
     imgUrl: ModaSalurt,
+    urlGithub: "https://github.com/ArthurFilho/Moda-Salurt",
     repoUrl: "https://moda-salurt.netlify.app",
-    urlGithub: "",
   },
   {
     id: 3,
     projectName: "Auto Spo",
     imgUrl: AutoSpo,
+    urlGithub: "https://github.com/ArthurFilho/AutoSpo-Project",
     repoUrl: "https://auto-spo.netlify.app",
-    urlGithub: "",
   },
   {
     id: 4,
     projectName: "Networkig Feed",
     imgUrl: NetworkigFeed,
+    urlGithub: "https://github.com/ArthurFilho/Networking-feed",
     repoUrl: "https://networking-feed.netlify.app",
-    urlGithub: "",
   },
   {
     id: 5,
     projectName: "Github Blog",
     imgUrl: GithubBlog,
+    urlGithub: "https://github.com/ArthurFilho/GITHUB-Blog",
     repoUrl: "https://github-blog-challenger.netlify.app",
-    urlGithub: "",
   },
   {
     id: 6,
     projectName: "WatchMe",
     imgUrl: WatchMe,
-    urlGithub: "",
+    urlGithub: "https://github.com/ArthurFilho/WatchMe",
     repoUrl: "",
   },
   {
     id: 7,
     projectName: "Ignite Shop",
     imgUrl: IgniteShop,
+    urlGithub: "https://github.com/ArthurFilho/Ignite-Shop",
     repoUrl: "",
-    urlGithub: "",
   },
   {
     id: 8,
     projectName: "Pomodoro Timer",
     imgUrl: PomodoroTimer,
+    urlGithub: "https://github.com/ArthurFilho/Pomodoro-Timer",
     repoUrl: "https://pomodorotimerp.netlify.app",
-    urlGithub: "",
   },
   {
     id: 9,
     projectName: "Financial Controller",
     imgUrl: FinancialController,
-    urlGithub: "",
+    urlGithub: "https://github.com/ArthurFilho/Financial-Controller",
     repoUrl: "",
   },
 ]
@@ -248,7 +248,7 @@ export function App(){
                     <a href="https://www.instagram.com/4rthur.tutu/"> <InstagramLogo size={24} /> </a>
                     
                     <a href="https://twitter.com/timoteo_arthur"> <TwitterLogo size={24} /> </a>
-                    
+
                   </ContainerSocials>
                  
                 </Presentation>
@@ -262,39 +262,43 @@ export function App(){
                     <span></span> 
 
                     <AboutMe>
-                      <p>
-                          Eu sou um desenvolvedor frontend capaz de criar soluções inovadoras e proporcionar uma 
-                          experiência única aos usuários. Meu comprometimento e dedicação constantes me permitem 
-                          aprimorar minhas habilidades e buscar sempre a excelência em cada projeto desenvolvido. 
-                          Eu sempre busco ter criatividade e determinação para alcançar os objetivos propostos.
-                      </p>
+                        <p>
+                            Eu sou um desenvolvedor frontend capaz de criar soluções inovadoras e proporcionar uma 
+                            experiência única aos usuários. <br /> Meu comprometimento e dedicação constantes me permitem 
+                            aprimorar minhas habilidades e buscar sempre a excelência em cada projeto desenvolvido. 
+                            Eu sempre busco ter criatividade e determinação para alcançar os objetivos propostos.
+                        </p>
 
 
-                      <div>
-                        <ul>
-                          <li>
-                            Nome: Arthur Filho
-                          </li>
+                        <div>
+                          <ul>
+                            <li>
+                              Nome: Arthur Filho
+                            </li>
 
-                          <li>
-                            Idade: 18 
-                          </li>
-                        </ul>
-                        <ul>
-                          <li>
-                            Contato: peraarthur2018@gmail.com
-                          </li>
+                            <li>
+                              Idade: 18 
+                            </li>
+                          </ul>
+                          <ul>
+                            <li>
+                              Contato: peraarthur2018@gmail.com
+                            </li>
 
-                          <li>
-                            Endereço: Sergipe - Aracaju
-                          </li>
-                        </ul>
-                      </div>
+                            <li>
+                              Endereço: Sergipe - Aracaju
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div> 
+                          
+                          <a href={Curriculo} download="Curriculo"> Currículo <FileArrowDown size={24} /> </a> 
+                          
+                          <a href={Curriculo} download="Curriculo"> Currículo <FileArrowDown size={24} /> </a> 
+
+                        </div>
                     </AboutMe>
-
-                  <div>
-                    <a href={Curriculo} download="Curriculo"> Currículo <FileArrowDown size={24} /> </a>
-                  </div>
 
                 </ContainerAboutMe>
               </ContainerAboutMeBackground>

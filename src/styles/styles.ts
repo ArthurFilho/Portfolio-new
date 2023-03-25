@@ -107,6 +107,21 @@ export const AboutMe = styled.div`
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 140px;
+            margin-top: 20px;
+            padding: 20px;
+            border: 3px solid #09090A;
+            border-radius: 15px;
+        }
+
+        a:hover {
+            background-color: #AB222E;
+        }
     }
     p {
         margin-bottom: 50px;
