@@ -14,7 +14,6 @@ import Jquery from "./assets/skills/jquery.png"
 import TypeScript from "./assets/skills/typescript.png"
 
 import CoffeeDelivery from "./assets/projects/coffee-delivery.png"
-import AnimalDaSorte from "./assets/projects/animal-da-sorte.png"
 import AutoSpo from "./assets/projects/auto-spo.png"
 import GithubBlog from "./assets/projects/github-blog.png"
 import ModaSalurt from "./assets/projects/moda-salurt.png"
@@ -23,6 +22,8 @@ import NetworkigFeed from "./assets/projects/networking-feed.png"
 import IgniteShop from "./assets/projects/ig-news.png"
 import PomodoroTimer from "./assets/projects/PomodoroTimer.png"
 import FinancialController from "./assets/projects/financial-controller.png"
+
+import TypeIt from "typeit-react";
 
 import { GithubLogo, InstagramLogo, TwitterLogo, LinkedinLogo } from "phosphor-react"
 import { useState } from "react";
@@ -209,7 +210,13 @@ export function App(){
                     <div>
                       <h1>
 
-                      Olá, meu nome é Arthur 😎
+                      <TypeIt
+                        options={{
+                          strings: ["Olá, meu nome é Arthur 😎"],
+                          speed: 100,
+                          waitUntilVisible: true,
+                        }}
+                      />
                        
                       </h1>
 
