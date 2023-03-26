@@ -30,7 +30,7 @@ import Curriculo from "./documents/curriculo.pdf"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import { GithubLogo, InstagramLogo, TwitterLogo, LinkedinLogo, FileArrowDown } from "phosphor-react"
+import { GithubLogo, InstagramLogo, TwitterLogo, LinkedinLogo, FileArrowDown, Envelope } from "phosphor-react"
 import { useState } from "react";
 
 interface skillsProps {
@@ -295,9 +295,10 @@ export function App(){
                           
                           <a href={Curriculo} download="Curriculo"> Currículo <FileArrowDown size={24} /> </a> 
                           
-                          <a href={Curriculo} download="Curriculo"> Currículo <FileArrowDown size={24} /> </a> 
+                          <a href="mailto:peraarthur2018@gmail.com"> Email <Envelope size={24} /> </a> 
 
                         </div>
+                        
                     </AboutMe>
 
                 </ContainerAboutMe>

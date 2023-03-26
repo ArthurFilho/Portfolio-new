@@ -111,8 +111,8 @@ export const AboutMe = styled.div`
         a {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            width: 140px;
+            justify-content: space-around;
+            width: 180px;
             margin-top: 20px;
             padding: 20px;
             border: 3px solid #09090A;
@@ -120,7 +120,8 @@ export const AboutMe = styled.div`
         }
 
         a:hover {
-            background-color: #AB222E;
+            background-color: #09090A;
+            color: #AB222E;
         }
     }
     p {
