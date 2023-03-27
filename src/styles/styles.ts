@@ -51,6 +51,7 @@ export const Presentation = styled.div`
         width: 250px;
         height: 250px;
         object-fit: cover;
+        border-radius: 40%;
     }
 `
 
@@ -90,10 +91,11 @@ export const ContainerAboutMe = styled.div`
     width: 60%;
     align-items: center;
     justify-content: space-between;
-    span {
+    img {
         width: 300px;
         height: 300px;
-        background-color: white;
+        object-fit: cover;
+        border-radius: 15px;
     }
 `
 

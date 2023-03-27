@@ -2,6 +2,7 @@ import { Widget } from "./components/Widget";
 import { ContainerProjects, ContainerSkills, AboutMe, Banner, ContainerAboutMe, ContainerAll, ContainerHeader, ContainerSocials, ContainerTextAndPictures, Dropdown, LogoTitle, Presentation, ContainerAboutMeBackground, Projects, ImgProjects, ContainerButtonsProjects, ContainerExperienceSkill } from "./styles/styles";
 
 import ArthurPicture from "./assets/Arthur.jpeg"
+import ArthurPicture01 from "./assets/Arthur.png"
 
 import Html from "./assets/skills/html.png"
 import Css from "./assets/skills/css.png"
@@ -259,10 +260,11 @@ export function App(){
               <ContainerAboutMeBackground>
                 <ContainerAboutMe data-aos="zoom-in">
 
-                    <span></span> 
+                  <img src={ArthurPicture} /> 
 
                     <AboutMe>
-                        <p>
+                        
+                        <p> 
                             Eu sou um desenvolvedor frontend capaz de criar soluções inovadoras e proporcionar uma 
                             experiência única aos usuários. <br /> Meu comprometimento e dedicação constantes me permitem 
                             aprimorar minhas habilidades e buscar sempre a excelência em cada projeto desenvolvido. 
@@ -271,6 +273,7 @@ export function App(){
 
 
                         <div>
+                         
                           <ul>
                             <li>
                               Nome: Arthur Filho
