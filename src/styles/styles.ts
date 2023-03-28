@@ -33,6 +33,7 @@ export const Dropdown = styled.div`
 
 export const Presentation = styled.div`
     width: 100%;
+    height: 500px;
     display: flex;
     flex-direction: column;
     margin-top: 100px;
@@ -52,7 +53,8 @@ export const Presentation = styled.div`
         width: 250px;
         height: 250px;
         object-fit: cover;
-        border-radius: 40%;
+        border-radius: 50%;
+        border: 5px solid #AB222E;
     }
 `
 
@@ -98,6 +100,7 @@ export const ContainerAboutMe = styled.div`
         height: 300px;
         object-fit: cover;
         border-radius: 15px;
+        border: 5px solid black;
     }
 `
 
@@ -121,6 +124,7 @@ export const AboutMe = styled.div`
             padding: 20px;
             border: 3px solid #09090A;
             border-radius: 15px;
+            transition: all 0.3s
         }
 
         a:hover {
@@ -140,6 +144,7 @@ export const ContainerSocials = styled.div`
 
     a:hover {
         color: #AB222E;
+        transition: all 0.3s
     }
 `
 
@@ -310,7 +315,33 @@ export const WorkContainer = styled.div`
             margin-bottom: 20px;
         }
     }
-    }
-    
+    }    
 `
 
+export const Footer = styled.div`
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(39 39 42);
+
+    a {
+        display: flex;
+    }
+    
+    h1 {
+        margin: 20px;
+    }
+
+    div {
+        display: flex;
+        gap: 10px;
+    }
+    
+    a:hover {
+        color: #AB222E;
+        transition: all 0.3s
+    }
+`

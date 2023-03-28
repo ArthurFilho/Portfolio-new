@@ -1,5 +1,5 @@
 import { Widget } from "./components/Widget";
-import { ContainerProjects, ContainerSkills, AboutMe, Banner, ContainerAboutMe, ContainerAll, ContainerHeader, ContainerSocials, ContainerTextAndPictures, Dropdown, LogoTitle, Presentation, ContainerAboutMeBackground, Projects, ImgProjects, ContainerButtonsProjects, ContainerExperienceSkill, WorkContainer } from "./styles/styles";
+import { ContainerProjects, ContainerSkills, AboutMe, Banner, ContainerAboutMe, ContainerAll, ContainerHeader, ContainerSocials, ContainerTextAndPictures, Dropdown, LogoTitle, Presentation, ContainerAboutMeBackground, Projects, ImgProjects, ContainerButtonsProjects, ContainerExperienceSkill, WorkContainer, Footer } from "./styles/styles";
 
 import ArthurPicture from "./assets/Arthur.jpeg"
 import ArthurPicture01 from "./assets/Arthur.png"
@@ -45,7 +45,8 @@ import {
   DeviceMobile, 
   Globe, 
   Monitor, 
-  Users, } 
+  Users,
+  ArrowUp, } 
 from "phosphor-react"
 
 import { useState } from "react";
@@ -219,7 +220,7 @@ export function App(){
   return(
       <ContainerAll> 
 
-                <ContainerHeader>
+                <ContainerHeader id="home">
                   
                   <LogoTitle>
                       Arthur Timóteo Bezerra Pereira Filho
@@ -248,13 +249,13 @@ export function App(){
                     <div>
                       <h1>
 
-                      <TypeIt
-                        options={{
-                          strings: ["Olá, meu nome é Arthur 😎"],
+                      <TypeIt 
+                          options={{
                           speed: 100,
                           waitUntilVisible: true,
-                        }}
-                      />
+                        }}>
+                        Olá, meu nome é <strong>Arthur</strong> 😎
+                      </TypeIt>
                        
                       </h1>
 
@@ -334,7 +335,7 @@ export function App(){
 
                     <WorkContainer>
 
-                        <h1>Metodologias que utilizo</h1>
+                        <h1> Metodologias que utilizo </h1>
 
                         <div data-aos="flip-down"> 
                         
@@ -480,6 +481,22 @@ export function App(){
                   </Projects>
 
                 </ContainerProjects>
+
+                <Footer>
+                  <h1>Arthur Timóteo Bezerra Pereira Filho © 2023</h1>
+                    
+                    <div>
+                      <a href="https://github.com/ArthurFilho"> <GithubLogo size={24} /> </a> 
+                      
+                      <a href="https://www.linkedin.com/in/arthur-filho/"> <LinkedinLogo size={24} /> </a>
+                      
+                      <a href="https://www.instagram.com/4rthur.tutu/"> <InstagramLogo size={24} /> </a>
+                      
+                      <a href="https://twitter.com/timoteo_arthur"> <TwitterLogo size={24} /> </a>
+                    </div>
+
+                    <h1> <a href="#home"> <ArrowUp size={32} /> Voltar para home <ArrowUp size={32} /> </a> </h1>
+                </Footer>
 
         <Widget />
       </ContainerAll>
