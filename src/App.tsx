@@ -1,5 +1,5 @@
 import { Widget } from "./components/Widget";
-import { ContainerProjects, ContainerSkills, AboutMe, Banner, ContainerAboutMe, ContainerAll, ContainerHeader, ContainerSocials, ContainerTextAndPictures, Dropdown, LogoTitle, Presentation, ContainerAboutMeBackground, Projects, ImgProjects, ContainerButtonsProjects, ContainerExperienceSkill } from "./styles/styles";
+import { ContainerProjects, ContainerSkills, AboutMe, Banner, ContainerAboutMe, ContainerAll, ContainerHeader, ContainerSocials, ContainerTextAndPictures, Dropdown, LogoTitle, Presentation, ContainerAboutMeBackground, Projects, ImgProjects, ContainerButtonsProjects, ContainerExperienceSkill, WorkContainer } from "./styles/styles";
 
 import ArthurPicture from "./assets/Arthur.jpeg"
 import ArthurPicture01 from "./assets/Arthur.png"
@@ -31,7 +31,7 @@ import Curriculo from "./documents/curriculo.pdf"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import { GithubLogo, InstagramLogo, TwitterLogo, LinkedinLogo, FileArrowDown, Envelope } from "phosphor-react"
+import { GithubLogo, InstagramLogo, TwitterLogo, LinkedinLogo, FileArrowDown, Envelope, DeviceMobile, Globe, Monitor } from "phosphor-react"
 import { useState } from "react";
 
 interface skillsProps {
@@ -254,9 +254,6 @@ export function App(){
                  
                 </Presentation>
 
-                <Banner>
-                </Banner>
-
               <ContainerAboutMeBackground>
                 <ContainerAboutMe data-aos="zoom-in">
 
@@ -307,26 +304,72 @@ export function App(){
                 </ContainerAboutMe>
               </ContainerAboutMeBackground>
 
+                    <WorkContainer data-aos="flip-down">
+
+                        <h1>Meus serviços</h1>
+
+                        <div> 
+                          <ul>
+                          
+                            <li> 
+
+                            <Monitor size={32} />
+                            
+                              <h2> Front-End development </h2> 
+
+
+                            
+                            </li>
+                            
+                            <li>
+
+                              <DeviceMobile size={32} />
+
+                              <h2> mobile development </h2>
+                              
+
+
+                            </li>
+                            
+                            <li>
+                              
+                              <Globe size={32} />
+
+                               <h2> web development </h2> 
+
+
+                            
+                            </li>
+                          
+                          </ul>
+                        </div>
+
+                    </WorkContainer>
+
                 <ContainerSkills>
+
+                  <h2>Linguagens que utilizo</h2>
               
-                {MySkills.map((Skills) => {
-                  return(
-                      <div data-aos="flip-up" onMouseOver={() => {setHoverSkills(Skills.id)}} onMouseOut={() => {setHoverSkills(0)}} key={Skills.id}>
-                        {hoverSkills == Skills.id ? 
-                        <ContainerExperienceSkill>
-                          <img src={Skills.imgUrl} alt="" />
-                          <p>{Skills.title}</p>
-                          <h1>{Skills.experience}</h1>
-                        </ContainerExperienceSkill>
-                        : 
-                        <>
-                          <img src={Skills.imgUrl} alt="" />
-                          <p>{Skills.title}</p>
-                        </>
-                        }
-                      </div>
-                  )
-                })}
+                <span>
+                  {MySkills.map((Skills) => {
+                    return(
+                        <div data-aos="flip-up" onMouseOver={() => {setHoverSkills(Skills.id)}} onMouseOut={() => {setHoverSkills(0)}} key={Skills.id}>
+                          {hoverSkills == Skills.id ? 
+                          <ContainerExperienceSkill>
+                            <img src={Skills.imgUrl} alt="" />
+                            <p>{Skills.title}</p>
+                            <h1>{Skills.experience}</h1>
+                          </ContainerExperienceSkill>
+                          : 
+                          <>
+                            <img src={Skills.imgUrl} alt="" />
+                            <p>{Skills.title}</p>
+                          </>
+                          }
+                        </div>
+                    )
+                  })}
+                </span>
                               
                 </ContainerSkills>
 

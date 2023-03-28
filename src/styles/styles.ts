@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import Banner1 from "../assets/banner.png"
+import Banner1 from "../assets/logo.png"
 
 export const ContainerAll = styled.div`
     width: 100%;
@@ -36,6 +36,7 @@ export const Presentation = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 100px;
+    margin-bottom: 50px;
     gap: 10px;
     align-items: center;
     justify-content: center;
@@ -144,12 +145,23 @@ export const ContainerSocials = styled.div`
 
 export const ContainerSkills = styled.div`
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
     width: 60%;
     margin-top: 50px;
-    gap: 20px;
+    margin-bottom: 50px;
+    
+    h2 {
+        font-size: 25px;
+        margin-bottom: 50px;
+    }
+
+    span {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
 
     div {
         width: 150px;
@@ -163,7 +175,7 @@ export const ContainerSkills = styled.div`
         padding: 10px;
         margin: 10px;
         cursor: pointer;
-        img {
+            img {
             width: 50px;
             margin-bottom: 10px;
         }
@@ -194,8 +206,9 @@ export const ContainerProjects = styled.div`
     justify-content: center;
     margin: 50px;
         h1 {
-            width: 80%;
+            width: 77%;
             margin: 50px;
+            font-size: 25px;
     }
 `
 
@@ -256,5 +269,25 @@ export const ContainerButtonsProjects = styled.div`
      }
 `
 
-
+export const WorkContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px;
+    
+    h1 {
+        margin-bottom: 50px;
+        font-size: 25px;
+    }
+    ul {
+        display: flex;
+        gap: 40px;
+        li {
+            padding: 50px;
+            background-color: rgb(39 39 42);
+            border-radius: 15px;
+    }
+    }
+`
 
