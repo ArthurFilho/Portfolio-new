@@ -8,7 +8,7 @@ export const ContainerAll = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: rgb(244 244 245);
+    color: #f4f4f5;
 `
 
 export const ContainerHeader = styled.div`
@@ -92,6 +92,7 @@ export const ContainerAboutMe = styled.div`
     width: 60%;
     align-items: center;
     justify-content: space-between;
+
     img {
         width: 300px;
         height: 300px;
@@ -124,7 +125,6 @@ export const AboutMe = styled.div`
 
         a:hover {
             background-color: #09090A;
-            color: #AB222E;
         }
     }
     p {
@@ -270,6 +270,7 @@ export const ContainerButtonsProjects = styled.div`
 `
 
 export const WorkContainer = styled.div`
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -283,11 +284,33 @@ export const WorkContainer = styled.div`
     ul {
         display: flex;
         gap: 40px;
+        flex-wrap: wrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         li {
-            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            height: 350px;
+            padding: 40px;
             background-color: rgb(39 39 42);
             border-radius: 15px;
+            align-items: flex-start;
+            justify-content: center;
+
+            p {
+                font-size: 15px;
+                opacity: 0.7;
+        }
+        
+        h2 {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
     }
     }
+    
 `
 

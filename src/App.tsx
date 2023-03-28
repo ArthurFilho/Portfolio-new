@@ -31,7 +31,23 @@ import Curriculo from "./documents/curriculo.pdf"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import { GithubLogo, InstagramLogo, TwitterLogo, LinkedinLogo, FileArrowDown, Envelope, DeviceMobile, Globe, Monitor } from "phosphor-react"
+import Devices from "./assets/devices.svg"
+
+import { Tilt } from 'react-tilt'
+
+import { 
+  GithubLogo, 
+  InstagramLogo, 
+  TwitterLogo, 
+  LinkedinLogo, 
+  FileArrowDown, 
+  Envelope, 
+  DeviceMobile, 
+  Globe, 
+  Monitor, 
+  Users, } 
+from "phosphor-react"
+
 import { useState } from "react";
 
 interface skillsProps {
@@ -177,6 +193,18 @@ const MyProjects : Array<projectProps> = [
     repoUrl: "",
   },
 ]
+
+const defaultOptions = {
+	reverse:        false,  // reverse the tilt direction
+	max:            35,     // max tilt rotation (degrees)
+	perspective:    1000,   // Transform perspective, the lower the more extreme the tilt gets.
+	scale:          1.1,    // 2 = 200%, 1.5 = 150%, etc..
+	speed:          1000,   // Speed of the enter/exit transition
+	transition:     true,   // Set a transition on enter/exit.
+	axis:           null,   // What axis should be disabled. Can be X or Y.
+	reset:          true,    // If the tilt effect has to be reset on exit.
+	easing:         "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
+}
  
 export function App(){
 
@@ -304,42 +332,88 @@ export function App(){
                 </ContainerAboutMe>
               </ContainerAboutMeBackground>
 
-                    <WorkContainer data-aos="flip-down">
+                    <WorkContainer>
 
-                        <h1>Meus serviços</h1>
+                        <h1>Metodologias que utilizo</h1>
 
-                        <div> 
+                        <div data-aos="flip-down"> 
+                        
                           <ul>
                           
+                          <Tilt options={defaultOptions}>
                             <li> 
 
                             <Monitor size={32} />
                             
-                              <h2> Front-End development </h2> 
+                              <h2> Densevolvimento front-end </h2> 
 
-
+                              <p> 
+                                Um desenvolvimento focado na criação de sites, páginas únicas, e-commerce e outras aplicações. 
+                                Promovendo uma boa experiência e uma boa otimização do site. 
+                              </p>
                             
                             </li>
-                            
+                          </Tilt>
+                          
+                          <Tilt options={defaultOptions}>
                             <li>
 
                               <DeviceMobile size={32} />
 
-                              <h2> mobile development </h2>
+                              <h2> Desenvolvimento Mobile </h2>
                               
-
+                              <p>
+                                Um desenvolvimento focado na criação de sites, páginas únicas, e-commerce e outras aplicações. 
+                                Promovendo uma boa experiência e uma boa otimização do site.
+                              </p>
 
                             </li>
+                          </Tilt>
                             
+                          <Tilt options={defaultOptions}>
                             <li>
                               
                               <Globe size={32} />
 
-                               <h2> web development </h2> 
+                               <h2> Desenvolvimento web </h2> 
 
-
+                              <p>
+                                Um desenvolvimento focado na criação de sites, páginas únicas, e-commerce e outras aplicações. 
+                                Promovendo uma boa experiência e uma boa otimização do site
+                              </p>
                             
                             </li>
+                          </Tilt>  
+                          
+                          <Tilt options={defaultOptions}>
+                            <li>
+
+                              <img src={Devices} alt="" />
+
+                              <h2> Desenvolvimento Responsivo </h2>
+
+                              <p> 
+                                Aplicação web responsiva, disponível para todos os dispositivos móveis, tornando o site mais prático e acessível. 
+                                Ou aplicações 100% mobile, como aplicativos. 
+                              </p>
+
+                            </li>
+                          </Tilt>
+
+                          <Tilt options={defaultOptions}>
+                            <li>
+
+                              <Users size={32} />
+
+                              <h2> Experiência do usuário </h2>
+
+                              <p>
+                                Aplicações voltadas a um conjunto de elementos e fatores de um serviço, produto ou sistema que tem como objetivo 
+                                promover uma boa experiência para o usuário.
+                              </p>
+
+                            </li>
+                          </Tilt>
                           
                           </ul>
                         </div>

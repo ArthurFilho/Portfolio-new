@@ -11,7 +11,8 @@
 
 body{
     background-color: #09090A; 
-    @apply text-zinc-100
+    @apply text-zinc-100;
+    overflow-x: hidden;
 }
 .headerx{
     cursor: pointer;
