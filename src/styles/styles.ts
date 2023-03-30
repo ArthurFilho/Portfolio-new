@@ -345,3 +345,5 @@ export const Footer = styled.div`
         transition: all 0.3s
     }
 `
+
+export const KnowledgeContainer = styled.div``

@@ -1,5 +1,5 @@
 import { Widget } from "./components/Widget";
-import { ContainerProjects, ContainerSkills, AboutMe, Banner, ContainerAboutMe, ContainerAll, ContainerHeader, ContainerSocials, ContainerTextAndPictures, Dropdown, LogoTitle, Presentation, ContainerAboutMeBackground, Projects, ImgProjects, ContainerButtonsProjects, ContainerExperienceSkill, WorkContainer, Footer } from "./styles/styles";
+import { ContainerProjects, KnowledgeContainer, ContainerSkills, AboutMe, Banner, ContainerAboutMe, ContainerAll, ContainerHeader, ContainerSocials, ContainerTextAndPictures, Dropdown, LogoTitle, Presentation, ContainerAboutMeBackground, Projects, ImgProjects, ContainerButtonsProjects, ContainerExperienceSkill, WorkContainer, Footer } from "./styles/styles";
 
 import ArthurPicture from "./assets/Arthur.jpeg"
 import ArthurPicture01 from "./assets/Arthur.png"
@@ -333,6 +333,8 @@ export function App(){
                 </ContainerAboutMe>
               </ContainerAboutMeBackground>
 
+                        <KnowledgeContainer></KnowledgeContainer>
+
                     <WorkContainer>
 
                         <h1> Metodologias que utilizo </h1>
@@ -483,6 +485,7 @@ export function App(){
                 </ContainerProjects>
 
                 <Footer>
+                  
                   <h1>Arthur Timóteo Bezerra Pereira Filho © 2023</h1>
                     
                     <div>
@@ -496,6 +499,7 @@ export function App(){
                     </div>
 
                     <h1> <a href="#home"> <ArrowUp size={32} /> Voltar para home <ArrowUp size={32} /> </a> </h1>
+
                 </Footer>
 
         <Widget />
