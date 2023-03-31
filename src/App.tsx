@@ -333,8 +333,6 @@ export function App(){
                 </ContainerAboutMe>
               </ContainerAboutMeBackground>
 
-                        <KnowledgeContainer></KnowledgeContainer>
-
                     <WorkContainer>
 
                         <h1> Metodologias que utilizo </h1>
@@ -449,6 +447,21 @@ export function App(){
                 </span>
                               
                 </ContainerSkills>
+
+                <KnowledgeContainer>
+                            <h1> Qualificações e certificado  </h1>
+
+                            <div>
+                              <ul>
+                                <li> <button> Programador Br Full stack </button> </li>
+                                <li> <button> RocketSeat Ignite </button> </li>
+                              </ul>
+
+                                <span> 
+                                    Selecione o curso que você queira ver informações.
+                                </span>
+                            </div>
+                </KnowledgeContainer>
 
                 <ContainerProjects id="projects">
 

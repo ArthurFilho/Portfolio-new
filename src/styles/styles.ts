@@ -346,4 +346,19 @@ export const Footer = styled.div`
     }
 `
 
-export const KnowledgeContainer = styled.div``
+export const KnowledgeContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 100px;
+    
+        div {
+            display: flex;
+            width: 50%;
+            align-items: center;
+            justify-content: space-between;
+            background: rgb(39 39 42);
+        }
+`
