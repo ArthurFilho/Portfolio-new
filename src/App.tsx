@@ -24,6 +24,9 @@ import IgniteShop from "./assets/projects/ig-news.png"
 import PomodoroTimer from "./assets/projects/PomodoroTimer.png"
 import FinancialController from "./assets/projects/financial-controller.png"
 
+import ProgBR from "./assets/knowledge/progbr.png"
+import RocketSeat from "./assets/knowledge/Rocketseat.png"
+
 import TypeIt from "typeit-react";
 
 import Curriculo from "./documents/curriculo.pdf"
@@ -311,7 +314,7 @@ export function App(){
                           </ul>
                           <ul>
                             <li>
-                              Contato: peraarthur2018@gmail.com
+                              Celular: 75 98342-5163
                             </li>
 
                             <li>
@@ -453,8 +456,8 @@ export function App(){
 
                             <div>
                               <ul>
-                                <li> <button> Programador Br Full stack </button> </li>
-                                <li> <button> RocketSeat Ignite </button> </li>
+                                <li> <button> <img src={ProgBR} width={32} alt="" /> Programador Br Full stack </button> </li>
+                                <li> <button> <img src={RocketSeat} width={32} alt="" /> RocketSeat Ignite </button> </li>
                               </ul>
 
                                 <span> 

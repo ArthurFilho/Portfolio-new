@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 import Banner1 from "../assets/logo.png"
 
@@ -326,6 +326,7 @@ export const Footer = styled.div`
     align-items: center;
     justify-content: center;
     background-color: rgb(39 39 42);
+    
 
     a {
         display: flex;
@@ -356,9 +357,18 @@ export const KnowledgeContainer = styled.div`
     
         div {
             display: flex;
-            width: 50%;
+            width: 60%;
             align-items: center;
             justify-content: space-between;
+            padding: 50px;
             background: rgb(39 39 42);
+        }
+
+        li {
+            margin-bottom: 30px;
+            button {
+                display: flex;
+                gap: 10px;
+            }
         }
 `
