@@ -80,7 +80,7 @@ export function FeedbackContentStep({
          disabled={comment.length === 0 || isSendingFeedback}
          className="p-2 bg-red-800 rounded-md border-transparent flex-1 flex justify-center items-center text-sm hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-red-800 transition-colors disabled:opacity-50 disabled:hover:bg-red-800 text"
          >
-         {isSendingFeedback ? <Loading/> : 'Send feedback'}
+         {isSendingFeedback ? <Loading/> : 'Dê o feedback'}
          </button>
          </footer>
          </form>

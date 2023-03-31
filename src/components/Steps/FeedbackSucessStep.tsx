@@ -17,14 +17,14 @@ export function FeedbackSuccessStep({onFeedbackRestartRequested}: FeedbackSucess
         <img src={imageSuccess}/>
 
 
-        <span className="text-xl mt-2"> we appreciate your feedback!</span>
+        <span className="text-xl mt-2"> Nos agradecemos o seu feedback!!!</span>
 
         <button
           type="button"
           onClick={onFeedbackRestartRequested}
           className="px-6 py-2 mt-6 bg-zinc-800 rounded-md border-transparent text-sm leading-6 hover:bg-zinc-700 transition-colors focus:border-brand-500 focus:ring-brand-500 focus:ring-1 focus:outline-none"
         >
-          I want to send another
+          Eu quero mandar outro
         </button>
       </div>
     </>

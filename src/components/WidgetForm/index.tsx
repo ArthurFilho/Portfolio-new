@@ -8,20 +8,20 @@ import Lightbulb from "../../assets/widget/lightbulb.svg"
 import ChatCenteredDots from "../../assets/widget/ChatCenteredDots.svg"
 
 export const feedbackTypes = {
-    BUG: { title: 'Problem',
+    BUG: { title: 'Problema',
            image: {
                source: Bug,
                alt: 'Image in a bug',
            },
         },
-    IDEA: { title: 'Idea',
+    IDEA: { title: 'Ideia',
             image: {
                source: Lightbulb,
                alt: 'Image in a light bulb',
            },
         },
         
-    OTHER: { title: 'Other',
+    OTHER: { title: 'Outro',
            image: {
                source: ChatCenteredDots,
                alt: 'Image in a baloon thought',
@@ -66,7 +66,7 @@ export function WidgetForm(){
           
 
          <footer className="text-xs text-neutral-400">
-         made by <a className="underline underline-offset-2" href="https://www.linkedin.com/in/arthur-filho/">Arthur Timóteo</a> with tutoring <a className="underline underline-offset-2"  href="https://rocketseat.com.br">Rocketseat</a>
+         feito por <a className="underline underline-offset-2" href="https://www.linkedin.com/in/arthur-filho/">Arthur Timóteo</a> com tutoria <a className="underline underline-offset-2"  href="https://rocketseat.com.br">Rocketseat</a>
          </footer>
        
     </div>

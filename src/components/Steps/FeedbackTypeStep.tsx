@@ -10,7 +10,7 @@ export function FeedbackTypeStep({ onFeedbackTypeChanged }: feedBackTypeStepProp
     return(
         <>
         <header>
-        <span className="text-xl leading-6">give your feedback</span>
+        <span className="text-xl leading-6">Dê o seu feedback</span>
         
         <CloseButton/>
         </header>
