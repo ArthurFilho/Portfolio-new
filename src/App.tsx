@@ -212,9 +212,11 @@ const defaultOptions = {
  
 export function App(){
 
-  const [hoverProjects, setHoverProjects] = useState(0)
+  const [ hoverProjects, setHoverProjects ] = useState(0)
 
-  const [hoverSkills, setHoverSkills] = useState(0)
+  const [ hoverSkills, setHoverSkills ] = useState(0)
+
+  const [ knowledgeSelected, setKnowledgeSelected ] = useState(true)
 
   AOS.init({
     duration: 500,
@@ -451,17 +453,39 @@ export function App(){
                               
                 </ContainerSkills>
 
-                <KnowledgeContainer>
+                <KnowledgeContainer data-aos="flip-down">
                             <h1> Qualificações e certificado  </h1>
 
                             <div>
                               <ul>
-                                <li> <button> <img src={ProgBR} width={32} alt="" /> Programador Br Full stack </button> </li>
-                                <li> <button> <img src={RocketSeat} width={32} alt="" /> RocketSeat Ignite </button> </li>
+                                <li> 
+                                  <button onClick={() => {setKnowledgeSelected(true)}}> 
+                                    <img src={ProgBR} width={32} alt="" /> Programador Br Full stack 
+                                  </button> 
+                                </li>
+                                
+                                <li> 
+                                  <button onClick={() => {setKnowledgeSelected(false)}}> 
+                                    <img src={RocketSeat} width={32} alt="" /> RocketSeat Ignite 
+                                  </button> 
+                                </li>
                               </ul>
 
                                 <span> 
-                                    Selecione o curso que você queira ver informações.
+                                    { knowledgeSelected == true ?
+                                        <>
+                                          <h2> Conhecimentos adquiridos no curso do ProgBr </h2>
+                                          <p>- HTML, CSS, JAVASCRIPT, BOOTSTRAP, JQUERY, FIREBASE, ELECTRON, MONGODB, NODEJS, REACT.</p>
+                                          <button> Certificado </button>
+                                        </>
+                                         :
+                                        <>
+                                          <h2> Conhecimentos adquiridos no curso da rocketseat </h2>
+                                          <p>- REACTJ.JS, REACT-NATIVE E NODE.JS.</p>
+                                          <button> Certificado </button>
+                                        </>
+
+                                    }
                                 </span>
                             </div>
                 </KnowledgeContainer>

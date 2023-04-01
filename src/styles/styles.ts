@@ -353,7 +353,11 @@ export const KnowledgeContainer = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    gap: 100px;
+    gap: 50px;
+
+        h1 {
+            font-size: 25px;
+        }
     
         div {
             display: flex;
@@ -362,13 +366,46 @@ export const KnowledgeContainer = styled.div`
             justify-content: space-between;
             padding: 50px;
             background: rgb(39 39 42);
+            border-radius: 15px;
+            height: 350px;
         }
 
         li {
             margin-bottom: 30px;
+            
             button {
                 display: flex;
                 gap: 10px;
+                transition: all 0.3s;
+            }
+            
+            button:hover {
+                color: #09090A;
+            }
+        }
+
+        span {
+            width: 50%;
+            font-size: 15px;
+                h2 {
+                    margin-bottom: 20px;
+                }
+                p {
+                    margin-bottom: 30px;
+                }
+                button {
+                    display: flex;
+                    width: 89%;
+                    align-items: center;
+                    justify-content: center;
+                    background: #09090A;
+                    padding: 10px;
+                    transition: all 0.3s;
+                    border-radius: 15px;
+            }
+
+            button:hover {
+                background-color: #AB222E;
             }
         }
 `
