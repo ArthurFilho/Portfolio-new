@@ -403,9 +403,17 @@ export const KnowledgeContainer = styled.div`
                     transition: all 0.3s;
                     border-radius: 15px;
             }
+        }
+`
 
-            button:hover {
+export const ButtonNotAllowed = styled.button`
+    cursor: not-allowed;
+    background-color: #09090A;
+    opacity: 0.8;
+`
+
+export const ButtonAllowed = styled.button`
+    :hover {
                 background-color: #AB222E;
             }
-        }
 `

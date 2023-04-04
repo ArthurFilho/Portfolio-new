@@ -1,5 +1,5 @@
 import { Widget } from "./components/Widget";
-import { ContainerProjects, KnowledgeContainer, ContainerSkills, AboutMe, Banner, ContainerAboutMe, ContainerAll, ContainerHeader, ContainerSocials, ContainerTextAndPictures, Dropdown, LogoTitle, Presentation, ContainerAboutMeBackground, Projects, ImgProjects, ContainerButtonsProjects, ContainerExperienceSkill, WorkContainer, Footer } from "./styles/styles";
+import { ContainerProjects, KnowledgeContainer, ContainerSkills, AboutMe, Banner, ContainerAboutMe, ContainerAll, ContainerHeader, ContainerSocials, ContainerTextAndPictures, Dropdown, LogoTitle, Presentation, ContainerAboutMeBackground, Projects, ImgProjects, ContainerButtonsProjects, ContainerExperienceSkill, WorkContainer, Footer, ButtonNotAllowed, ButtonAllowed } from "./styles/styles";
 
 import ArthurPicture from "./assets/Arthur.jpeg"
 import ArthurPicture01 from "./assets/Arthur.png"
@@ -24,19 +24,19 @@ import IgniteShop from "./assets/projects/ig-news.png"
 import PomodoroTimer from "./assets/projects/PomodoroTimer.png"
 import FinancialController from "./assets/projects/financial-controller.png"
 
-import ProgBR from "./assets/knowledge/progbr.png"
-import RocketSeat from "./assets/knowledge/Rocketseat.png"
+import ProgBR from "./assets/knowledge/progbr.png";
+import RocketSeat from "./assets/knowledge/Rocketseat.png";
 
 import TypeIt from "typeit-react";
 
-import Curriculo from "./documents/curriculo.pdf"
+import Curriculo from "./documents/curriculo.pdf";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import Devices from "./assets/devices.svg"
+import Devices from "./assets/devices.svg";
 
-import { Tilt } from 'react-tilt'
+import { Tilt } from 'react-tilt';
 
 import { 
   GithubLogo, 
@@ -50,9 +50,12 @@ import {
   Monitor, 
   Users,
   ArrowUp, } 
-from "phosphor-react"
+from "phosphor-react";
+
+import * as Dialog from '@radix-ui/react-dialog';
 
 import { useState } from "react";
+import { KnowledgeModal } from "./components/KnowledgeModal";
 
 interface skillsProps {
   id: number,
@@ -475,14 +478,20 @@ export function App(){
                                     { knowledgeSelected == true ?
                                         <>
                                           <h2> Conhecimentos adquiridos no curso do ProgBr </h2>
-                                          <p>- HTML, CSS, JAVASCRIPT, BOOTSTRAP, JQUERY, FIREBASE, ELECTRON, MONGODB, NODEJS, REACT.</p>
-                                          <button> Certificado </button>
+                                          <p> - HTML, CSS, JAVASCRIPT, BOOTSTRAP, JQUERY, FIREBASE, ELECTRON, MONGODB, NODEJS, REACT. </p>
+                                          <Dialog.Root>
+                                            <Dialog.Trigger asChild>
+                                              <ButtonAllowed> Certificado </ButtonAllowed>
+                                            </Dialog.Trigger>
+                                            <KnowledgeModal />
+                                          </Dialog.Root>
                                         </>
                                          :
                                         <>
                                           <h2> Conhecimentos adquiridos no curso da rocketseat </h2>
-                                          <p>- REACTJ.JS, REACT-NATIVE E NODE.JS.</p>
-                                          <button> Certificado </button>
+                                          <p> - REACTJ.JS, REACT-NATIVE E NODE.JS. </p>
+                                          <ButtonNotAllowed> Em Processo </ButtonNotAllowed>
+                                          
                                         </>
 
                                     }
