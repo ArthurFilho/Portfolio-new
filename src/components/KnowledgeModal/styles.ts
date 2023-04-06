@@ -20,7 +20,8 @@ export const Content = styled(Dialog.Content)`
     border-radius: 6px;
     background: rgb(39 39 42);
     color: #f4f4f5;
-    overflow-y: scroll;
+    padding-top: 75rem;
+    overflow: scroll;
 
     position: fixed;
     top: 50%;
@@ -45,6 +46,11 @@ export const CloseButton = styled(Dialog.DialogClose)`
 
 export const TittleContainer = styled.div`
     display: flex;
-    
+    width: 70%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
 `
 
+export const ImageTestBug = styled.img`
+`

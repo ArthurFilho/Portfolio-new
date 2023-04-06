@@ -3,6 +3,7 @@ import { X } from 'phosphor-react'
 import {
   CloseButton,
   Content,
+  ImageTestBug,
   Overlay,
   TittleContainer,
 } from './styles'
@@ -20,16 +21,16 @@ import Certificado4 from '../../assets/knowledge/DVWBATBPF36RE295104.png'
       <Content>
 
             <TittleContainer> 
+            <Dialog.Title> Certificado </Dialog.Title>
                 <CloseButton>
                 <X size={24} />
                 </CloseButton>
-                <Dialog.Title> Certificado </Dialog.Title>
             </TittleContainer>
 
                 <img src={Certificado1} alt="" />
-                <img src={Certificado2} alt="" />
                 <img src={Certificado3} alt="" />
                 <img src={Certificado4} alt="" />
+                <ImageTestBug src={Certificado2} alt="" />
 
       </Content>
 

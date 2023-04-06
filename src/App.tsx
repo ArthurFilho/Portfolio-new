@@ -341,6 +341,40 @@ export function App(){
                 </ContainerAboutMe>
               </ContainerAboutMeBackground>
 
+                    <ContainerProjects id="projects">
+
+                    <h1>Projetos Feitos</h1>
+
+                      <Projects>
+                        {MyProjects.map((repos)=> {
+                          return(
+                                <div data-aos="fade-right" onMouseOver={() => {setHoverProjects(repos.id)}} onMouseOut={() => {setHoverProjects(0)}} key={repos.id}>
+                                {hoverProjects == repos.id ? 
+                                <>
+                                  <ImgProjects src={repos.imgUrl} alt="" />
+                                  
+                                  <ContainerButtonsProjects> 
+                                    <p>{repos.projectName}</p>
+                                    <div>
+                                      
+                                      <a href={repos.urlGithub}>Github</a> 
+
+                                      {repos.repoUrl == '' ? '' : <a href={repos.repoUrl}>Site no Ar</a>}
+                                
+                                    </div>
+                                  </ContainerButtonsProjects>
+                                </>
+                                :
+                                <img src={repos.imgUrl} alt="" />
+                              }
+                                  
+                                </div>
+                          )
+                        })}
+                      </Projects>   
+
+                    </ContainerProjects>
+
                     <WorkContainer>
 
                         <h1> Metodologias que utilizo </h1>
@@ -429,6 +463,7 @@ export function App(){
 
                     </WorkContainer>
 
+
                 <ContainerSkills>
 
                   <h2>Linguagens que utilizo</h2>
@@ -498,40 +533,6 @@ export function App(){
                                 </span>
                             </div>
                 </KnowledgeContainer>
-
-                <ContainerProjects id="projects">
-
-                  <h1>Projetos Feitos</h1>
-                  
-                  <Projects>
-                    {MyProjects.map((repos)=> {
-                      return(
-                            <div data-aos="fade-right" onMouseOver={() => {setHoverProjects(repos.id)}} onMouseOut={() => {setHoverProjects(0)}} key={repos.id}>
-                            {hoverProjects == repos.id ? 
-                            <>
-                              <ImgProjects src={repos.imgUrl} alt="" />
-                              
-                              <ContainerButtonsProjects> 
-                                <p>{repos.projectName}</p>
-                                <div>
-                                  
-                                  <a href={repos.urlGithub}>Github</a> 
-
-                                  {repos.repoUrl == '' ? '' : <a href={repos.repoUrl}>Site no Ar</a>}
-                            
-                                </div>
-                              </ContainerButtonsProjects>
-                            </>
-                            :
-                            <img src={repos.imgUrl} alt="" />
-                          }
-                              
-                            </div>
-                      )
-                    })}
-                  </Projects>
-
-                </ContainerProjects>
 
                 <Footer>
                   

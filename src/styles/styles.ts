@@ -354,6 +354,7 @@ export const KnowledgeContainer = styled.div`
     justify-content: center;
     width: 100%;
     gap: 50px;
+    margin-bottom: 100px;
 
         h1 {
             font-size: 25px;
