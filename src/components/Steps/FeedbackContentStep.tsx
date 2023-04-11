@@ -6,6 +6,8 @@ import { ScreenshotButton } from "../WidgetForm/screenshotButton";
 import { api } from "../WidgetForm/lib/api";
 import { Loading } from "../WidgetForm/Loading";
 
+import emailjs from "@emailjs/browser"
+
 interface FeedbackContentStepProps{
 
     onFeedBackRestartRequested: ()=> void;
@@ -41,6 +43,24 @@ export function FeedbackContentStep({
         });
         setIsSendingFeedback(false);    
         onFeedbackSent()
+
+        if(comment === ''){
+            alert("Preencha todos os campos");
+            return
+        }
+    
+        const templateParams = {
+            from_name: FeedBackTypeInfo,
+            comment: comment,
+        }
+    
+        emailjs.send("service_osh9o5j", "template_xbkm0lz", templateParams, "-K7DkayEZikN8FBhH")
+        .then((response)=>{
+            console.log("email enviado", response.status, response.status)
+        setComment('')
+        },(err) => {
+            console.log("Erro: ", err)
+        })
       }
 
     return(
@@ -80,7 +100,7 @@ export function FeedbackContentStep({
          disabled={comment.length === 0 || isSendingFeedback}
          className="p-2 bg-red-800 rounded-md border-transparent flex-1 flex justify-center items-center text-sm hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-red-800 transition-colors disabled:opacity-50 disabled:hover:bg-red-800 text"
          >
-         {isSendingFeedback ? <Loading/> : 'Dê o feedback'}
+         {isSendingFeedback ? <Loading /> : 'Dê o feedback'}
          </button>
          </footer>
          </form>

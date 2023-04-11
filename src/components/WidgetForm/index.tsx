@@ -31,8 +31,6 @@ export const feedbackTypes = {
 
 export type FeedbackType = keyof typeof feedbackTypes;
 
-
-
 export function WidgetForm(){
 
     const [FeedBackType, setFeedBackType] = useState<FeedbackType | null>(null);
@@ -66,7 +64,7 @@ export function WidgetForm(){
           
 
          <footer className="text-xs text-neutral-400">
-         feito por <a className="underline underline-offset-2" href="https://www.linkedin.com/in/arthur-filho/">Arthur Timóteo</a> com tutoria <a className="underline underline-offset-2"  href="https://rocketseat.com.br">Rocketseat</a>
+         feito por <a className="underline underline-offset-2" href="https://www.linkedin.com/in/arthur-filho/"> Arthur Timóteo </a> com tutoria <a className="underline underline-offset-2"  href="https://rocketseat.com.br">Rocketseat</a>
          </footer>
        
     </div>

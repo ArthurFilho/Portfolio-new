@@ -29,7 +29,7 @@ import RocketSeat from "./assets/knowledge/Rocketseat.png";
 
 import TypeIt from "typeit-react";
 
-import Curriculo from "./documents/curriculo.pdf";
+import Curriculo from "./assets/documents/curriculo.pdf";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -391,8 +391,8 @@ export function App(){
                               <h2> Densevolvimento front-end </h2> 
 
                               <p> 
-                                Um desenvolvimento focado na criação de sites, páginas únicas, e-commerce e outras aplicações. 
-                                Promovendo uma boa experiência e uma boa otimização do site. 
+                                Um desenvolvimento focado na criação de aplicações e outros projetos web, 
+                                com o objetivo de fornecer uma experiência agradável ao usuário e uma otimização eficiente do site. 
                               </p>
                             
                             </li>
@@ -406,8 +406,8 @@ export function App(){
                               <h2> Desenvolvimento Mobile </h2>
                               
                               <p>
-                                Um desenvolvimento focado na criação de sites, páginas únicas, e-commerce e outras aplicações. 
-                                Promovendo uma boa experiência e uma boa otimização do site.
+                                Um desenvolvimento focado no mobile
+                                Promovendo uma boa experiência e uma boa otimização do app.
                               </p>
 
                             </li>
@@ -422,7 +422,7 @@ export function App(){
 
                               <p>
                                 Um desenvolvimento focado na criação de sites, páginas únicas, e-commerce e outras aplicações. 
-                                Promovendo uma boa experiência e uma boa otimização do site
+                                Promovendo uma boa experiência e uma boa otimização do site.
                               </p>
                             
                             </li>
@@ -468,27 +468,27 @@ export function App(){
 
                   <h2>Linguagens que utilizo</h2>
               
-                <span>
-                  {MySkills.map((Skills) => {
-                    return(
-                        <div data-aos="flip-up" onMouseOver={() => {setHoverSkills(Skills.id)}} onMouseOut={() => {setHoverSkills(0)}} key={Skills.id}>
-                          {hoverSkills == Skills.id ? 
-                          <ContainerExperienceSkill>
-                            <img src={Skills.imgUrl} alt="" />
-                            <p>{Skills.title}</p>
-                            <h1>{Skills.experience}</h1>
-                          </ContainerExperienceSkill>
-                          : 
-                          <>
-                            <img src={Skills.imgUrl} alt="" />
-                            <p>{Skills.title}</p>
-                          </>
-                          }
-                        </div>
-                    )
-                  })}
-                </span>
-                              
+                    <span>
+                      {MySkills.map((Skills) => {
+                        return(
+                            <div data-aos="flip-up" onMouseOver={() => {setHoverSkills(Skills.id)}} onMouseOut={() => {setHoverSkills(0)}} key={Skills.id}>
+                              {hoverSkills == Skills.id ? 
+                              <ContainerExperienceSkill>
+                                <img src={Skills.imgUrl} alt="" />
+                                <p>{Skills.title}</p>
+                                <h1>{Skills.experience}</h1>
+                              </ContainerExperienceSkill>
+                              : 
+                              <>
+                                <img src={Skills.imgUrl} alt="" />
+                                <p>{Skills.title}</p>
+                              </>
+                              }
+                            </div>
+                        )
+                      })}
+                    </span>
+                                  
                 </ContainerSkills>
 
                 <KnowledgeContainer data-aos="flip-down">
@@ -528,7 +528,6 @@ export function App(){
                                           <ButtonNotAllowed> Em Processo </ButtonNotAllowed>
                                           
                                         </>
-
                                     }
                                 </span>
                             </div>

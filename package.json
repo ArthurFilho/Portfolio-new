@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@headlessui/react": "^1.6.0",
     "@phosphor-icons/react": "^2.0.6",
     "@radix-ui/react-dialog": "^1.0.3",
@@ -16,6 +17,7 @@
     "aos": "^2.3.4",
     "axios": "^0.27.2",
     "dotenv": "^16.0.1",
+    "emailjs": "^4.0.1",
     "html2canvas": "^1.4.1",
     "install": "^0.13.0",
     "phosphor-react": "^1.4.1",

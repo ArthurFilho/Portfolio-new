@@ -63,6 +63,9 @@ export const ContainerTextAndPictures = styled.div`
     width: 60%;
     align-items: center;
     gap: 20px;
+    @media (max-width: 768px) {
+        width: 80%;
+    }
 `
 
 export const LogoTitle = styled.div`
@@ -102,6 +105,14 @@ export const ContainerAboutMe = styled.div`
         border-radius: 15px;
         border: 5px solid black;
     }
+
+    @media (max-width: 768px) {
+        width: 100%;
+        img {
+            width: 200px;
+            height: 400px;
+        }
+      }
 `
 
 export const AboutMe = styled.div`
@@ -134,6 +145,11 @@ export const AboutMe = styled.div`
     p {
         margin-bottom: 50px;
     }
+    @media (max-width: 768px) {
+        div {
+            gap: 10px;
+        }
+      }
 `
 
 export const ContainerSocials = styled.div`
@@ -405,6 +421,11 @@ export const KnowledgeContainer = styled.div`
                     border-radius: 15px;
             }
         }
+        @media (max-width: 768px) {
+        div {
+            width: 90%;
+        }
+      }
 `
 
 export const ButtonNotAllowed = styled.button`
