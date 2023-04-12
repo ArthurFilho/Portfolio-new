@@ -17,6 +17,11 @@ export const ContainerHeader = styled.div`
     align-items: center;
     justify-content: space-between;
     margin-top: 3rem;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 50px;
+      }
 `
 
 export const Dropdown = styled.div`

@@ -29,7 +29,7 @@ import RocketSeat from "./assets/knowledge/Rocketseat.png";
 
 import TypeIt from "typeit-react";
 
-import Curriculo from "./assets/documents/curriculo.pdf";
+import Curriculo from "./assets/documents/Arthur_Filho.pdf";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
