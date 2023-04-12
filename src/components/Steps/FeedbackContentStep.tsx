@@ -3,7 +3,6 @@ import { ArrowLeft } from "phosphor-react";
 import { CloseButton } from "../CloseButton";
 import { FeedbackType, feedbackTypes } from "../WidgetForm";
 import { ScreenshotButton } from "../WidgetForm/screenshotButton";
-import { api } from "../WidgetForm/lib/api";
 import { Loading } from "../WidgetForm/Loading";
 
 import emailjs from "@emailjs/browser"
@@ -33,15 +32,6 @@ export function FeedbackContentStep({
 
     async function handleSubmitFeedback(event: FormEvent) {
         event.preventDefault();
-        setIsSendingFeedback(true);
-
-        await api.post('/feedbacks' , {
-            type: FeedBackType,
-            comment,
-            screenshot,
-
-        });
-        setIsSendingFeedback(false);    
         onFeedbackSent()
 
         if(comment === ''){
@@ -50,16 +40,18 @@ export function FeedbackContentStep({
         }
     
         const templateParams = {
-            from_name: FeedBackTypeInfo,
-            comment: comment,
+            from_name: FeedBackTypeInfo.title,
+            message: comment,
         }
     
         emailjs.send("service_osh9o5j", "template_xbkm0lz", templateParams, "-K7DkayEZikN8FBhH")
         .then((response)=>{
             console.log("email enviado", response.status, response.status)
-        setComment('')
+            setComment('')
+            setIsSendingFeedback(true)
         },(err) => {
             console.log("Erro: ", err)
+            setIsSendingFeedback(false)
         })
       }
 

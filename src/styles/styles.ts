@@ -264,6 +264,18 @@ export const Projects = styled.div`
     img {
         width: 50px;
     }
+
+    a {
+        background-color: rgb(39 39 42);
+        padding: 15px;
+        border-radius: 10px;
+        transition: all 0.3s;
+        cursor: pointer;
+        
+        :hover {
+            background-color: #AB222E;
+        }
+    }
 `
 
 export const ImgProjects = styled.img`
@@ -285,7 +297,7 @@ export const ContainerButtonsProjects = styled.div`
         border-radius: 5px;
         cursor: pointer;
      }
-     a:hover {
+     a:hover {    
         background-color: #AB222E;
      }
 `

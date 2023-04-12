@@ -371,6 +371,7 @@ export function App(){
                                 </div>
                           )
                         })}
+                        <a href="https://github.com/ArthurFilho?tab=repositories">Ver mais projetos no github</a>
                       </Projects>   
 
                     </ContainerProjects>
