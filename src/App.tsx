@@ -2,7 +2,7 @@ import { Widget } from "./components/Widget";
 import { ContainerProjects, KnowledgeContainer, ContainerSkills, AboutMe, Banner, ContainerAboutMe, ContainerAll, ContainerHeader, ContainerSocials, ContainerTextAndPictures, Dropdown, LogoTitle, Presentation, ContainerAboutMeBackground, Projects, ImgProjects, ContainerButtonsProjects, ContainerExperienceSkill, WorkContainer, Footer, ButtonNotAllowed, ButtonAllowed } from "./styles/styles";
 
 import ArthurPicture from "./assets/Arthur.jpeg"
-import ArthurPicture01 from "./assets/Arthur.png"
+import ArthurPicture01 from "./assets/Arthur1.png"
 
 import Html from "./assets/skills/html.png"
 import Css from "./assets/skills/css.png"
@@ -54,8 +54,9 @@ from "phosphor-react";
 
 import * as Dialog from '@radix-ui/react-dialog';
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { KnowledgeModal } from "./components/KnowledgeModal";
+import { api } from "./components/lib/api"
 
 interface skillsProps {
   id: number,
@@ -72,6 +73,9 @@ interface projectProps {
   urlGithub: string,
 }
 
+interface repositoriesProps {
+  public_repos: string,
+}
 const MySkills : Array<skillsProps> = [
   {
     id: 1,
@@ -201,6 +205,8 @@ const MyProjects : Array<projectProps> = [
   },
 ]
 
+
+
 const defaultOptions = {
 	reverse:        false,  // reverse the tilt direction
 	max:            35,     // max tilt rotation (degrees)
@@ -220,6 +226,19 @@ export function App(){
   const [ hoverSkills, setHoverSkills ] = useState(0)
 
   const [ knowledgeSelected, setKnowledgeSelected ] = useState(true)
+
+  const [ repositories, setRepositories ] = useState({} as repositoriesProps)
+
+  async function RepositoriesLoad () {
+
+    const response = await api.get('/users/arthurfilho')
+    setRepositories(response.data)
+
+  }
+
+  useEffect(() => {
+    RepositoriesLoad()
+  }, [])
 
   AOS.init({
     duration: 500,
@@ -273,7 +292,7 @@ export function App(){
                       </p>
                     </div>
 
-                  <img src={ArthurPicture} />
+                  <img src={ArthurPicture01} />
 
                   </ContainerTextAndPictures>
                     
@@ -343,7 +362,7 @@ export function App(){
 
                     <ContainerProjects id="projects">
 
-                    <h1>Projetos Feitos</h1>
+                    <h1>Projetos pessoais feitos: {repositories.public_repos}</h1>
 
                       <Projects>
                         {MyProjects.map((repos)=> {
@@ -371,7 +390,7 @@ export function App(){
                                 </div>
                           )
                         })}
-                        <a href="https://github.com/ArthurFilho?tab=repositories">Ver mais projetos no github</a>
+                        <a href="https://github.com/ArthurFilho?tab=repositories">Ver todos os projetos no github</a>
                       </Projects>   
 
                     </ContainerProjects>

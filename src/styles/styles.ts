@@ -50,18 +50,24 @@ export const Presentation = styled.div`
     }
 
     img {
-        width: 250px;
-        height: 250px;
+        width: 400px;
+        height: 500px;
         object-fit: cover;
         border-radius: 50%;
-        border: 5px solid #AB222E;
+    }
+
+    @media (max-width: 768px) {
+        img {
+            width: 150px;
+        }
     }
 `
 
 export const ContainerTextAndPictures = styled.div`
     display: flex;
-    width: 60%;
+    width: 80%;
     align-items: center;
+    justify-content: space-between;
     gap: 20px;
     @media (max-width: 768px) {
         width: 80%;
