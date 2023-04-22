@@ -466,7 +466,7 @@ export const KnowledgeContainer = styled.div`
         @media (max-width: 768px) {
         div {
             width: 100%;
-            height: 550px;
+            height: 600px;
             flex-direction: column;
         }
       }
