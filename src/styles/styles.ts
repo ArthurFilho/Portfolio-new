@@ -19,6 +19,7 @@ export const ContainerHeader = styled.div`
     margin-top: 3rem;
 
     @media (max-width: 768px) {
+        width: 50%;
         flex-direction: column;
         gap: 50px;
       }
@@ -75,7 +76,11 @@ export const ContainerTextAndPictures = styled.div`
     justify-content: space-between;
     gap: 20px;
     @media (max-width: 768px) {
-        width: 80%;
+        width: 90%;
+
+        img {
+            width: 100px;
+        }
     }
 `
 
@@ -120,7 +125,7 @@ export const ContainerAboutMe = styled.div`
     @media (max-width: 768px) {
         width: 100%;
         img {
-            width: 200px;
+            width: 150px;
             height: 400px;
         }
       }
@@ -157,9 +162,18 @@ export const AboutMe = styled.div`
         margin-bottom: 50px;
     }
     @media (max-width: 768px) {
-        div {
-            gap: 10px;
-        }
+        width: 40%;
+        font-size: 10px;
+            div {
+                gap: 10px;
+            }
+            a {
+                width: 50px;
+                padding: 5px;
+            }
+            li {
+                font-size: 6px;
+            }
       }
 `
 
@@ -355,6 +369,11 @@ export const WorkContainer = styled.div`
         }
     }
     }    
+    @media (max-width: 768px) {
+       li {
+        width: 100px;
+       }
+      }
 `
 
 export const Footer = styled.div`
@@ -446,7 +465,9 @@ export const KnowledgeContainer = styled.div`
         }
         @media (max-width: 768px) {
         div {
-            width: 90%;
+            width: 100%;
+            height: 550px;
+            flex-direction: column;
         }
       }
 `
