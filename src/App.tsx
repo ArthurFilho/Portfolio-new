@@ -390,8 +390,10 @@ export function App(){
                                 </div>
                           )
                         })}
-                        <a href="https://github.com/ArthurFilho?tab=repositories">Ver todos os projetos no github</a>
+                        
                       </Projects>   
+                      
+                      <a href="https://github.com/ArthurFilho?tab=repositories">Ver todos os projetos no github</a>
 
                     </ContainerProjects>
 
