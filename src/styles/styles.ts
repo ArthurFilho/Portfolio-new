@@ -79,7 +79,7 @@ export const ContainerTextAndPictures = styled.div`
         width: 90%;
 
         img {
-            width: 100px;
+            display: none;
         }
     }
 `
@@ -124,8 +124,9 @@ export const ContainerAboutMe = styled.div`
 
     @media (max-width: 768px) {
         width: 100%;
+        flex-direction: column;
         img {
-            width: 150px;
+            width: 300px;
             height: 400px;
         }
       }
@@ -162,7 +163,7 @@ export const AboutMe = styled.div`
         margin-bottom: 50px;
     }
     @media (max-width: 768px) {
-        width: 40%;
+        width: 80%;
         font-size: 10px;
             div {
                 gap: 10px;
