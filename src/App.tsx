@@ -1,5 +1,5 @@
 import { Widget } from "./components/Widget";
-import { ContainerProjects, KnowledgeContainer, ContainerSkills, AboutMe, Banner, ContainerAboutMe, ContainerAll, ContainerHeader, ContainerSocials, ContainerTextAndPictures, Dropdown, LogoTitle, Presentation, ContainerAboutMeBackground, Projects, ImgProjects, ContainerButtonsProjects, ContainerExperienceSkill, WorkContainer, Footer, ButtonNotAllowed, ButtonAllowed } from "./styles/styles";
+import { ContainerProjects, KnowledgeContainer, ContainerSkills, AboutMe, ContainerAboutMe, ContainerAll, ContainerHeader, ContainerSocials, ContainerTextAndPictures, Dropdown, LogoTitle, Presentation, ContainerAboutMeBackground, Projects, ImgProjects, ContainerButtonsProjects, ContainerExperienceSkill, WorkContainer, Footer, ButtonNotAllowed, ButtonAllowed, WidgetStyleMedia } from "./styles/styles";
 
 import ArthurPicture from "./assets/Arthur.jpeg"
 import ArthurPicture01 from "./assets/Arthur1.png"
@@ -229,11 +229,14 @@ export function App(){
 
   const [ repositories, setRepositories ] = useState({} as repositoriesProps)
 
+  const [openModal, setOpenModal] = useState(false)
+
+
+
   async function RepositoriesLoad () {
 
     const response = await api.get('/users/arthurfilho')
     setRepositories(response.data)
-
   }
 
   useEffect(() => {
@@ -401,7 +404,7 @@ export function App(){
 
                         <h1> Metodologias que utilizo </h1>
 
-                        <div data-aos="flip-down"> 
+                        <div> 
                         
                           <ul>
                           
@@ -485,7 +488,6 @@ export function App(){
 
                     </WorkContainer>
 
-
                 <ContainerSkills>
 
                   <h2>Linguagens que utilizo</h2>
@@ -513,7 +515,7 @@ export function App(){
                                   
                 </ContainerSkills>
 
-                <KnowledgeContainer data-aos="flip-down">
+                <KnowledgeContainer>
                             <h1> Qualificações e certificado  </h1>
 
                             <div>
@@ -534,14 +536,12 @@ export function App(){
                                 <span> 
                                     { knowledgeSelected == true ?
                                         <>
-                                          <h2> Conhecimentos adquiridos no curso do ProgBr </h2>
-                                          <p> - HTML, CSS, JAVASCRIPT, BOOTSTRAP, JQUERY, FIREBASE, ELECTRON, MONGODB, NODEJS, REACT. </p>
-                                          <Dialog.Root>
-                                            <Dialog.Trigger asChild>
-                                              <ButtonAllowed> Certificado </ButtonAllowed>
-                                            </Dialog.Trigger>
-                                            <KnowledgeModal />
-                                          </Dialog.Root>
+                                            <h2> Conhecimentos adquiridos no curso do ProgBr </h2>
+                                            <p> - HTML, CSS, JAVASCRIPT, BOOTSTRAP, JQUERY, FIREBASE, ELECTRON, MONGODB, NODEJS, REACT. </p>
+                                            <button onClick={() => setOpenModal(true)}>Certificado</button>
+                                            <KnowledgeModal isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)}>
+                                             
+                                            </KnowledgeModal>
                                         </>
                                          :
                                         <>
@@ -572,7 +572,7 @@ export function App(){
                     <h1> <a href="#home"> <ArrowUp size={32} /> Voltar para home <ArrowUp size={32} /> </a> </h1>
 
                 </Footer>
-
+                      
         <Widget />
       </ContainerAll>
   )

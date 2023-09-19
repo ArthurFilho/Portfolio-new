@@ -3,12 +3,12 @@ import styled from "styled-components"
 import Banner1 from "../assets/logo.png"
 
 export const ContainerAll = styled.div`
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: #f4f4f5;
+    width: 100%;
 `
 
 export const ContainerHeader = styled.div`
@@ -63,6 +63,7 @@ export const Presentation = styled.div`
     }
 
     @media (max-width: 768px) {
+        width: 80%;
         img {
             width: 150px;
         }
@@ -183,10 +184,10 @@ export const ContainerSocials = styled.div`
     align-items: flex-start;
     justify-content: center;
     gap: 10px;
+    transition: all 0.3s;
 
     a:hover {
         color: #AB222E;
-        transition: all 0.3s
     }
 `
 
@@ -227,6 +228,11 @@ export const ContainerSkills = styled.div`
             margin-bottom: 10px;
         }
     }
+    @media (max-width: 768px) {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+      }
 `
 
 export const ContainerExperienceSkill = styled.div`
@@ -483,4 +489,11 @@ export const ButtonAllowed = styled.button`
     :hover {
                 background-color: #AB222E;
             }
+`
+
+export const WidgetStyleMedia = styled.div`
+@media (max-width: 768px) {
+    display: none;
+    position: relative;
+}
 `
