@@ -29,6 +29,10 @@ export const Dropdown = styled.div`
     display: flex;
     gap: 5rem;
     
+    a {
+        cursor: pointer;
+    }
+
     div {
         transition: all 0.3s;
     }
