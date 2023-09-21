@@ -1,5 +1,6 @@
 import { Widget } from "./components/Widget";
 import { ContainerProjects, KnowledgeContainer, ContainerSkills, AboutMe, ContainerAboutMe, ContainerAll, ContainerHeader, ContainerSocials, ContainerTextAndPictures, Dropdown, LogoTitle, Presentation, ContainerAboutMeBackground, Projects, ImgProjects, ContainerButtonsProjects, ContainerExperienceSkill, WorkContainer, Footer, ButtonNotAllowed, ButtonAllowed, WidgetStyleMedia } from "./styles/styles";
+import { useRef } from 'react';
 
 import ArthurPicture from "./assets/Arthur.jpeg"
 import ArthurPicture01 from "./assets/Arthur1.png"
@@ -231,7 +232,12 @@ export function App(){
 
   const [openModal, setOpenModal] = useState(false)
 
+  const HomeRef = useRef<HTMLDivElement | null>(null);
+  const ProjectsRef = useRef<HTMLDivElement | null>(null);
 
+  function scroll(ref:any) {
+    ref.current.scrollIntoView({ behavior: "smooth" });
+  }
 
   async function RepositoriesLoad () {
 
@@ -258,12 +264,12 @@ export function App(){
 
                   <Dropdown>
                     
-                    <div>       
-                     <a href="#home">Home</a>
+                    <div onClick={() => scroll(HomeRef)}>       
+                     <a>Sobre mim</a>
                     </div>
                     
-                    <div>
-                      <a href="#projects">Projetos</a>
+                    <div onClick={() => scroll(ProjectsRef)}>
+                      <a>Projetos</a>
                     </div>
                     
                     <div>
@@ -283,7 +289,9 @@ export function App(){
                           options={{
                           speed: 100,
                           waitUntilVisible: true,
-                        }}>
+                        }}
+                        
+                        >
                         Olá, meu nome é <strong>Arthur</strong> 😎
                       </TypeIt>
                        
@@ -313,12 +321,12 @@ export function App(){
                  
                 </Presentation>
 
-              <ContainerAboutMeBackground>
-                <ContainerAboutMe data-aos="zoom-in">
+              <ContainerAboutMeBackground ref={HomeRef}>
+                <ContainerAboutMe  data-aos="zoom-in">
 
                   <img src={ArthurPicture} /> 
 
-                    <AboutMe>
+                    <AboutMe >
                         
                         <p> 
                             Eu sou um desenvolvedor frontend capaz de criar soluções inovadoras e proporcionar uma 
@@ -363,7 +371,7 @@ export function App(){
                 </ContainerAboutMe>
               </ContainerAboutMeBackground>
 
-                    <ContainerProjects id="projects">
+                    <ContainerProjects ref={ProjectsRef} id="projects">
 
                     <h1>Projetos pessoais feitos: {repositories.public_repos}</h1>
 
