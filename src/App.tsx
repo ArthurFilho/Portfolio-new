@@ -81,37 +81,37 @@ const MySkills : Array<skillsProps> = [
     id: 1,
     title: "Html",
     imgUrl: Html,
-    experience: "2 Anos",
+    experience: "3 Anos",
   },
   {
     id: 2,
     title: "Css",
     imgUrl: Css,
-    experience: "2 Anos",
+    experience: "3 Anos",
   },
   {
     id: 3,
     title: "JS",
     imgUrl: JS,
-    experience: "2 Anos",
+    experience: "3 Anos",
   },
   {
     id: 4,
     title: "React",
     imgUrl: React,
-    experience: "1 Ano e meio",
+    experience: "2 anos",
   },
   {
     id: 5,
     title: "React Native",
     imgUrl: React,
-    experience: "1 Ano",
+    experience: "2 anos Ano",
   },
   {
     id: 6,
     title: "TypeScript",
     imgUrl: TypeScript,
-    experience: "1 ano e meio",
+    experience: "2 anos",
   },
   {
     id: 7,
@@ -572,7 +572,7 @@ export function App(){
                     <h1> <a href="#home"> <ArrowUp size={32} /> Voltar para home <ArrowUp size={32} /> </a> </h1>
 
                 </Footer>
-                      
+
         <Widget />
       </ContainerAll>
   )

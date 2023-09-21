@@ -28,10 +28,3 @@ export const Content = styled.div`
 export const ButtonAndTittle = styled.div`
   color: #f4f4f5;
 `
-
-export const TittleContainer = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-`
