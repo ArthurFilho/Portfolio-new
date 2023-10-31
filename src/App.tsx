@@ -100,13 +100,13 @@ const MySkills : Array<skillsProps> = [
     id: 4,
     title: "React",
     imgUrl: React,
-    experience: "2 anos",
+    experience: "3 anos",
   },
   {
     id: 5,
     title: "React Native",
     imgUrl: React,
-    experience: "2 anos Ano",
+    experience: "3 anos",
   },
   {
     id: 6,
